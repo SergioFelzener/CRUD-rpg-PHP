@@ -1,0 +1,120 @@
+::selection {
+    background-color: #b5e2e7;
+}
+
+::-moz-selection {
+    background-color: #8ac7d8;
+}
+
+body {
+    background: url(img/teste.jpg);
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+#logbox {
+    
+
+    padding: 10px;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-left: 30%;
+    margin-right: 20%;
+    width: 340px;
+    -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    text-align: center;
+    font-size: 175%;
+    color: white;
+    font-weight: 300;
+}
+
+h1, input {
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.input {
+    width: 75%;
+    height: 50px;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 0 15px;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+}
+.input:focus {
+    outline: none;
+    border-bottom-color: #3283a8 !important;
+}
+.input:hover {
+    border-bottom-color: #dcdcdc;
+    color: black;
+    background-color: white;
+}
+.input:invalid {
+    box-shadow: none;
+}
+
+
+
+.inputButton {
+    position: relative;
+    width: 85%;
+    height: 50px;
+    display: block;
+    margin: 30px auto 30px;
+    color: white;
+    background-color: #3283a8;
+    border: none;
+    -webkit-box-shadow: 1px 5px 0 #2CADAD;
+    -moz-box-shadow: 1px 5px 0 #2CADAD;
+    box-shadow: 5px 4px 8px  white;
+}
+.inputButton:hover {
+    top: 1px;
+    -webkit-box-shadow: 0 3px 0  #3283a8;
+    -moz-box-shadow: 0 3px 0 #3283a8;
+    box-shadow: 5px 4px 8px  white;
+}
+.inputButton:active {
+    top: 5px;
+    box-shadow: 3px 2px 4px  #3283a8;;
+}
+.inputButton:focus {
+    outline: none;
+}
+
+p{
+    color:white;
+    text-align: center;
+    background-color: red;
+
+}
+
+.notificacao {
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+
+}
+a {
+    font-size: 16px;
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+
+#texto {
+    text-align: center;
+    color: #ffffff;
+    
+}

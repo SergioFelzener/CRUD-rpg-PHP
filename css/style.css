@@ -1,0 +1,21 @@
+.container-fluid {
+    margin-top: 40px;
+    margin-left: 5%;
+}
+
+#tamanhoContainer {
+    width: 370px;
+}
+#btnCadastro {
+    text-align: right;
+}
+#botao {
+    background-color: #E50F87;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+
+#card {
+    font-size: 10px;
+}
