@@ -11,7 +11,7 @@
 <body>
 <div class="container" id="tamanhoContainer">
     <h4>Formulário de cadastro de Personagens RPG</h4>
-        <form action="inserir.php" method="POST">
+        <form action="inserir.php" method="POST" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label for="nome">Nome do Personagem</label>
@@ -140,10 +140,13 @@
                 <label>Inteligência</label>
                 <input type="number" class="form-control" name="inteli" placeholder="Nível de inteligência" autocomplete="off" required>
             </div>
+            
+                                <input type="file" name="img"/>
+                                
+<br>
             <div id="btnCadastro">
                 <a href="menu.php" role="button" class="btn btn-sm btn-primary">voltar</a>
                 <button type="submit" id="botao" class="btn btn-sm float-right">cadastrar</button>
-                
             </div>
 
         </form>

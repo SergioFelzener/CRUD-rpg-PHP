@@ -3,7 +3,7 @@
 include 'conexao.php';
 
 // criando variavel do e recebendo a variavel 
-$nome = $_POST ['nome_personagem'];
+$nome = $_POST ['nome'];
 $categoria = $_POST ['categoria'];
 $armas = $_POST ['armas'];
 $itens = $_POST ['itens'];
@@ -11,12 +11,32 @@ $tesouros = $_POST ['tesouro'];
 $power = $_POST ['power'];
 $destreza = $_POST ['destreza'];
 $inteli = $_POST ['inteli'];
-//$img = $_POST ['img'];
+$img = $_FILES ['img'];
 // verificando o retorno das variaveis 
 // echo $sql = "INSERT INTO `estoque`(`nproduto`, `nomeproduto`, `categoria`, `quantidade`, `fornecedor`) VALUES ($nproduto, '$nomeproduto', '$categoria', $quantidade, '$fornecedor')"; 
 
-$sql = "INSERT INTO `personagens`(`nome`, `categoria`, `armas`, `itens`, `tesouros`, `power`, `destreza`, `inteli`)  
-        VALUES ('$nome', '$categoria', '$armas', '$itens', '$tesouros', $power, $destreza, $inteli)"; 
+
+$imagem = isset($_FILES['img']) ?$_FILES['img']:"";
+if (isset($_FILES['img'])) {
+    $nomeimg = $imagem ['name'];
+    $tipos_permitidos = ['jpg','jpeg','png'];
+    $tamanho = $imagem ['size'];
+    $extensao = explode('.', $nomeimg);
+    $extensao = end($extensao);
+    $novo_nome = rand() . '.' . $extensao;
+
+    if(in_array($extensao, $tipos_permitidos)) {
+        move_uploaded_file($_FILES['img']['tmp_name'], 'uploads/' . $novo_nome);
+    }
+} else {
+    print "Tipo de arquivo não permitido";
+}
+
+
+
+
+$sql = "INSERT INTO `personagens`(`nome`, `categoria`, `armas`, `itens`, `tesouros`, `power`, `destreza`, `inteli`, `img`)  
+        VALUES ('$nome', '$categoria', '$armas', '$itens', '$tesouros', $power, $destreza, $inteli, '$novo_nome')"; 
 
 $inserir = mysqli_query($conexao, $sql);
 
