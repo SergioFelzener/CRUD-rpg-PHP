@@ -31,7 +31,7 @@ session_start();
                             if(isset($_SESSION['status_cadastro'])):
                         ?>
                                     <div class="notificacao">
-                                        <h5>Cadastro Efetuado</h5>
+                                        <h5 style="margin-top:5px;">Cadastro Efetuado</h5>
                                         <h5>Aguardando Aprovação</h5></p>
                                     </div>
                                     <?php
@@ -44,7 +44,7 @@ session_start();
                             if (isset($_SESSION['usuario_existe'])):
                         ?>
                                 <div>
-                                    <p>O usuário já existe</p>
+                                    <p id="msg">O usuário já existe</p>
                                     <?php
                             endif;
                                         if(isset($_SESSION['usuario_existe'])){

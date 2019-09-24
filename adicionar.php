@@ -140,8 +140,14 @@
                 <label>Inteligência</label>
                 <input type="number" class="form-control" name="inteli" placeholder="Nível de inteligência" autocomplete="off" required>
             </div>
+            <div class="form-group">
+                <label for="img">Imagem</label>
+                <div>
+                <input type="file" class="form-control-file" name="img" placeholder="Imagem" autocomplete="off" required>
+                </div>
+            </div>
             
-                                <input type="file" name="img"/>
+                                
                                 
 <br>
             <div id="btnCadastro">
