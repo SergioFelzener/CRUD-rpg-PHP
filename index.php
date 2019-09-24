@@ -30,7 +30,7 @@ session_start();
                     if (isset($_SESSION['nao_autenticado'])):
                 ?>
                 <div class="erro">
-                    <p id="fail">ERRO: Usuário ou Senha inválidos</p>
+                    <p id="msg">ERRO: Usuário ou Senha inválidos</p>
                 </div>
                 <?php
                 endif;
