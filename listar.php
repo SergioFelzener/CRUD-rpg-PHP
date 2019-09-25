@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
     <title>Listar Produtos</title>
 </head>
@@ -26,7 +26,8 @@
                 <th scope="col">DESTREZA</th>
                 <th scope="col">INTELIGÊNCIA</th>
                 <th scope="col">IMAGEM</th>
-                <th scope="col">AÇÃO</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Deletar</th>
               </tr>
             </thead>
            
@@ -60,16 +61,16 @@
                   <td><?php echo $power ?></td>
                   <td><?php echo $destreza ?></td>
                   <td><?php echo $inteli ?></td>
-                  <td><?php echo $img ?></td>
+                  <td><?php echo "<img style='height: 70px;' src=uploads/$img></img>"  ?></td>
                   <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar.php?id=<?php echo $id_personagens ?>" 
-                    role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
+                    role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; </a></td>
 
-                    <a class="btn btn-danger btn-sm" style="color:#ffffff" href="deletar.php?id=<?php echo $id_personagens ?>" 
-                    role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a></td>
+                  <td><a class="btn btn-danger btn-sm" style="color:#ffffff" href="deletar.php?id=<?php echo $id_personagens ?>" 
+                    role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; </a></td>
                 </tr>
                 
                 <?php
-                //abrindo novamente a tag php e fechando a {} do wilhe apos o td pois o laco vai adicionar elementos ao TD.
+                //abrindo novamente a tag php e fechando a {} do while apos o td pois o laco vai adicionar elementos ao TD.
 
                 } ?>
 

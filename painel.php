@@ -8,7 +8,7 @@ if(session_id() == '' || !isset($_SESSION)) {
 include ('verifica_login.php');
 ?>
 
-<h2>Olá, <?php echo $_SESSION['nome'];?></h2>
+<h2 style="margin-left:15px; margin-top: 15px;"> Olá, <?php echo $_SESSION['nome'];?></h2>
 
 
 
@@ -24,5 +24,5 @@ $array = mysqli_fetch_array($buscar);
 $nivel = $array ['nivel'];
 ?>
 
-<h6><a href="logout.php" class="float-left">Fazer o LOGOUT</a></h6>
+<h6><a href="logout.php" class="float-left" style="margin-left:40px;">Fazer o LOGOUT</a></h6><br><br>
 

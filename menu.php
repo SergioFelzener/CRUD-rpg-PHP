@@ -10,8 +10,8 @@ include 'painel.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style2.css">
     <title>Menu</title>
 </head>
 <body>
@@ -24,17 +24,17 @@ include 'painel.php'
                 if (($nivel == 1)||($nivel == 2 )) {
             ?>
 
-                <div id="card" class="card" style="width: 10rem;">
+                <div id="card" class="card-body card-body-cascade" style="width: 10rem;">
                     <img class="card-img-top" src="img/addpers.jpg" alt="Imagem de capa do card">
                         <div class="card-body"><br>
-                            <h6 class="card-title">Adicionar Personagem</h6>
-                            <p class="card-text">Adicionar Personagem ao banco de dados</p><br><br><br><br>
+                            <h6 class="pink-text pb-2 pt-1">Adicionar Personagem</h6>
+                            <p class="font-weight-bold card-title">Adicionar Personagem ao banco de dados</p><br><br><br><br>
                             <a href="adicionar.php" class="btn btn-primary">Adicionar</a>
                         </div>
                 </div>
                 <?php } ?>
 
-                <div id="card" class="card" style="width: 10rem;">
+                <div id="card" class="card-body card-body-cascade" style="width: 10rem;">
                     <img class="card-img-top" src="img/addpers.jpg" alt="Imagem de capa do card">
                         <div class="card-body"><br>
                             <h6 class="card-title">Lista de Personagens</h6>
@@ -42,7 +42,7 @@ include 'painel.php'
                             <a href="listar.php" class="btn btn-primary">Listar</a>
                         </div>
                 </div>
-                <div id="card" class="card" style="width: 10rem;">
+                <div id="card" class="card-body card-body-cascade" style="width: 10rem;">
                     <img class="card-img-top" src="img/listararmas.png" alt="Imagem de capa do card">
                         <div class="card-body"><br>
                             <h6 class="card-title">Lista de Armas</h6><br>
@@ -50,7 +50,7 @@ include 'painel.php'
                             <a href="listar_armas.php" class="btn btn-primary">Listar</a>
                         </div>
                 </div>
-                <div id="card" class="card" style="width: 10rem;">
+                <div id="card" class="card-body card-body-cascade" style="width: 10rem;">
                     <img class="card-img-top" src="img/itens.png" alt="Imagem de capa do card">
                         <div class="card-body"><br><br>
                             <h6 class="card-title">Lista de Itens</h6>
@@ -58,7 +58,8 @@ include 'painel.php'
                             <a href="listar_itens.php" class="btn btn-primary">Listar</a>
                         </div>
                 </div>
-                <div id="card" class="card" style="width: 10rem;">
+        
+                <div id="card" class="card-body card-body-cascade" style="width: 10rem;">
                     <img class="card-img-top" src="img/tesouros.gif" alt="Imagem de capa do card">
                         <div class="card-body">
                             <h6 class="card-title">Lista de Tesouros</h6>
@@ -75,7 +76,7 @@ include 'painel.php'
             if (($nivel == 1) || ($nivel == 2)) {
 
             ?>
-                <div id="card" class="card" style="width: 10rem;">
+                <div id="card" class="card-body card-body-cascade" style="width: 10rem;">
                     <img class="card-img-top" src="img/rpgcat.png" alt="Imagem de capa do card">
                         <div class="card-body"><br><br>
                             <h6 class="card-title">Adicionar Categoria</h6><br>
@@ -83,7 +84,7 @@ include 'painel.php'
                             <a href="adicionar_categoria.php" class="btn btn-primary">Cadastrar</a>
                         </div>
                 </div>
-                <div id="card" class="card" style="width: 10rem;">
+                <div id="card" class="card-body card-body-cascade" style="width: 10rem;">
                     <img class="card-img-top" src="img/armasdd.png" alt="Imagem de capa do card">
                         <div class="card-body">
                             <h6 class="card-title">Adicionar Armas</h6><br>
@@ -91,7 +92,7 @@ include 'painel.php'
                             <a href="adicionar_armas.php" class="btn btn-primary">Cadastrar</a>
                         </div>
                 </div>
-                <div id="card" class="card" style="width: 10rem;">
+                <div id="card" class="card-body card-body-cascade" style="width: 10rem;">
                     <img class="card-img-top" src="img/Magic_Items.jpg" alt="Imagem de capa do card">
                         <div class="card-body">
                             <h6 class="card-title">Adicionar Itens</h6><br>
@@ -100,7 +101,7 @@ include 'painel.php'
                         </div>
                 </div>
                 
-                <div id="card" class="card" style="width: 10rem;">
+                <div id="card" class="card-body card-body-cascade" style="width: 10rem;">
                     <img class="card-img-top" src="img/tesadd.jpg" alt="Imagem de capa do card">
                         <div class="card-body">
                             <h6 class="card-title">Adicionar Tesouros</h6>
@@ -120,14 +121,14 @@ include 'painel.php'
             ?>
 
           
-                <div class="card" style="width: 15rem;">
+                <div class="card-body card-body-cascade" style="width: 15rem;">
                     <img class="card-img-top" src="img/administrador.png" alt="Imagem de capa do card">
                         <div class="card-body"><h5>Aprovar Usuários Cadastrados</h5>
                             <p class="card-text">Aprovar Usuarios no banco de dados dando suas permições</p>
                             <a href="aprovar_usuario.php" class="btn btn-primary">aprovar</a>
                         </div>
                 </div>
-                <div class="card" style="width: 15rem;">
+                <div class="card-body card-body-cascade" style="width: 15rem;">
                     <img class="card-img-top" src="img/administrador.png" alt="Imagem de capa do card">
                         <div class="card-body"><h5>Listar Usuários Cadastrados</h5>
                             <p class="card-text">listar Usuarios no banco de dados e suas permições</p><br>

@@ -31,7 +31,7 @@ session_start();
                             if(isset($_SESSION['status_cadastro'])):
                         ?>
                                     <div class="notificacao">
-                                        <h5>Cadastro Efetuado</h5>
+                                        <h5 style="margin-top:5px;">Cadastro Efetuado</h5>
                                         <h5>Aguardando Aprovação</h5></p>
                                     </div>
                                     <?php
@@ -44,7 +44,7 @@ session_start();
                             if (isset($_SESSION['usuario_existe'])):
                         ?>
                                 <div>
-                                    <p>O usuário já existe</p>
+                                    <p id="msg">O usuário já existe</p>
                                     <?php
                             endif;
                                         if(isset($_SESSION['usuario_existe'])){
@@ -66,8 +66,11 @@ session_start();
                         </div>
                         <div class="form-group">
                             <label style="color:#ffffff;">Senha</label>
-                            <input name="senha" class="form-control" id="txtsenha" type="password" placeholder="Senha" required="required" class="input pass" autocomplete="off"/>
+                            <input name="senha" class="form-control" id="txtsenha" type="password" 
+                                   placeholder="Senha" required="required" class="input pass" autocomplete="off"
+                                   />
                         </div>
+                        <div id="mostrasenha"></div>
                         <div class="form-group"> 
                             <label style="color:#ffffff;">Repetir Senha</label>   
                             <input name="repetirsenha" class="form-control" type="password" placeholder=" Repetir Senha" required="required" class="input pass" autocomplete="off" oninput="validaSenha(this)" />
@@ -75,7 +78,7 @@ session_start();
                         </div>
                         <div class="form-group">
                             <a href="index.php" role="button" class="btn btn-sm btn-warning float-left">voltar</a>
-                            <input type="submit" value="Criar Conta" class="inputButton btn btn-sm login_btn float-right"/>
+                            <input type="submit" value="Criar Conta" class="inputButton btn btn-sm login_btn float-right" onclick="forcasenha()"/>
                             
                         </div>
                        
@@ -97,22 +100,8 @@ session_start();
         </div>
     </div>
 </div>
-    <script>
-        // validando senha ... conferindo se os dois campos senha foram digitados identicos 
-        // vai buscar o valor do txtsenha e comparar com o repetir senha 
-        function validaSenha (input) {
-            if (input.value != document.getElementById('txtsenha').value){
-                input.setCustomValidity('Senha não confere com a digitada anteriormente');
-            }
-            else {
-                input.setCustomValidity('');
-            }
-        }
-    </script>
-  
-
-
-
-
+    <script src="js/validasenha.js"></script>
+    <script src="js/forcasenha.js"></script>
+    
 </body>
 </html>
