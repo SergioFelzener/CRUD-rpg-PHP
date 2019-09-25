@@ -1,7 +1,7 @@
 <?php
 
-include 'painel.php'; 
-echo "<br>"
+include 'painel.php'
+
 ?>
 
 
