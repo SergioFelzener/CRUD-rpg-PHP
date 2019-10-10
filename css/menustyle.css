@@ -1,3 +1,10 @@
+body {
+  background-color: rgb(35, 195, 213); 
+}
+
+
+
+
 .cards-list {
     z-index: 0;
     width: 100%;

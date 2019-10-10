@@ -68,8 +68,17 @@ session_start();
                             <label style="color:#ffffff;">Senha</label>
                             <input name="senha" class="form-control" id="txtsenha" type="password" 
                                    placeholder="Senha" required="required" class="input pass" autocomplete="off"
+                                   onkeyup="senhaForca()"
                                    />
+
+                                  <!-- <div id="impSenha" style="color:white;"></div>
+                                   <div id="impForcaSenha" style="color:white;"></div>-->
+                                   
                         </div>
+                        <div class="form-group">
+                            <div id="erroSenhaForca"></div>
+                        </div>
+
                         <div id="mostrasenha"></div>
                         <div class="form-group"> 
                             <label style="color:#ffffff;">Repetir Senha</label>   
@@ -102,6 +111,7 @@ session_start();
 </div>
     <script src="js/validasenha.js"></script>
     <script src="js/forcasenha.js"></script>
+    <script src="js/personalizado.js"></script>
     
 </body>
 </html>
