@@ -112,6 +112,11 @@ margin-left: 4px;
     color: #ffffff;
     
 }
+
+#impSenha {
+    text-align: center;
+    color: #ffffff;
+}
 .notificacao {
     color: rgba(255, 247, 12, 0.82);
     font-size: 6px;
