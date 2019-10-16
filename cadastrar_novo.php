@@ -30,7 +30,7 @@ if($row['total'] == 1) {
 $sql = "INSERT INTO usuario (nome, usuario, email, senha, data_cadastro, nivel, status) VALUES ('$nome', '$usuario', '$email', '$senha', NOW(),$nivel,'$status')"; 
 //echo "INSERT INTO usuario (nome, usuario, senha, data_cadastro, nivel, estado) VALUES ('$nome', '$usuario', '$senha', NOW(),$nivel,'$estado')";
 
-// validando usando 3 === que compara os dados valor booleano tem que voltar booleano
+// validando usando 3 === que compara os dados valor booleano tem que voltar booleano ou seja tem que ser identicos..
 if ($conexao -> query($sql) === TRUE) {
     $_SESSION ['status_cadastro'] = true;
 }

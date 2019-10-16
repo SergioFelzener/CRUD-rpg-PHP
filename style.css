@@ -112,6 +112,11 @@ margin-left: 4px;
     color: #ffffff;
     
 }
+
+#impSenha {
+    text-align: center;
+    color: #ffffff;
+}
 .notificacao {
     color: rgba(255, 247, 12, 0.82);
     font-size: 6px;
@@ -123,4 +128,12 @@ margin-left: 4px;
     box-shadow: 9px 8px 16px 5px #ffffff;
     
 }
-
+a {
+    color: yellow;
+}
+a:hover {
+    color: rgb(0, 187, 255);
+}
+.progress{
+    height: 0.4rem;
+}
