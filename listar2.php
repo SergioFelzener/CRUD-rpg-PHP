@@ -16,7 +16,13 @@
       }
       p {
         text-align: center;
-      };;
+      }
+      .card{
+        
+      -webkit-box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 21px 26px 14px 14px rgba(0,0,0,0.81); 
+      box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 21px 26px 14px 14px rgba(0,0,0,0.81);
+
+      }
     </style>
     <title>Listar Produtos</title>
 </head>
