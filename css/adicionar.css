@@ -1,0 +1,84 @@
+
+.container{
+    max-width: 350px;
+    height: 100%;
+	align-content: center;
+	padding-bottom: 6%;
+	padding-top: 2%;
+    }
+
+.form-style{
+	max-width: 450px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style label{
+	display:block;
+	margin-bottom: 10px;
+}
+.form-style label > span{
+	float: left;
+	width: 100px;
+	color: #F072A9;
+	font-weight: bold;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px #fff;
+}
+.form-style fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #FFD2D2;
+	padding: 20px;
+	background: #FFF4F4;
+	box-shadow: inset 0px 0px 15px #FFE5E5;
+	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+
+.form-style textarea{
+	width:250px;
+	height:100px;
+}
+.form-style input[type=text],
+.form-style input[type=date],
+.form-style input[type=datetime],
+.form-style input[type=number],
+.form-style input[type=search],
+.form-style input[type=time],
+.form-style input[type=url],
+.form-style input[type=email],
+.form-style select, 
+.form-style textarea{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid rgb(20, 40, 255);
+	outline: none;
+	color: #040401;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px #09adbf;
+	-moz-box-shadow: inset 1px 1px 4px rgb(207, 44, 240);
+	-webkit-box-shadow: inset 1px 1px 4px #232398;
+	background: rgb(180, 200, 252);
+	width:100%;
+}
+.form-style  input[type=submit],
+.form-style  input[type=button]{
+	background: rgb(130, 181, 244);
+	border: 1px solid rgb(9, 99, 255);
+	padding: 5px 15px 5px 15px;
+	color: rgb(203, 237, 255);
+	box-shadow: inset -1px -1px 3px #FF62A7;
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+}
+.required{
+	color:red;
+	font-weight:normal;
+}
