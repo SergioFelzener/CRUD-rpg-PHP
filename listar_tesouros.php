@@ -9,6 +9,21 @@
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
     <title>Listar Tesouros</title>
 </head>
+<style>
+  body{
+        background-image:url(img/fmred2.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color:#464646;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: 100%;
+        color: #ffffff;
+    }
+
+</style>
 <body>
 <div class="container">
 
@@ -39,10 +54,10 @@
                   <td><?php echo $id_tesouro ?></td>
                   <td><?php echo $nome_tesouro ?></td>
              
-                  <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_tesouro.php?id=<?php echo $id_armas ?>" 
+                  <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_tesouro.php?id=<?php echo $id_tesouro ?>" 
                     role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
 
-                    <a class="btn btn-danger btn-sm" style="color:#ffffff" href="deletar_tesouro.php?id=<?php echo $id_armas ?>" 
+                    <a class="btn btn-danger btn-sm" style="color:#ffffff" href="deletar_tesouro.php?id=<?php echo $id_tesouro ?>" 
                     role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a></td>
                 </tr>
                 

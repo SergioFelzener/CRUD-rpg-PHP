@@ -9,6 +9,22 @@
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
     <title>Listar Armas</title>
 </head>
+<style>
+  body{
+        background-image:url(img/fmred2.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color:#464646;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: 100%;
+        color: #ffffff;
+    }
+
+</style>
+
 <body>
 <div class="container">
 

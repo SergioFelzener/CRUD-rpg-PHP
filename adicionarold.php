@@ -5,81 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/adicionar.css">
-    <title>Adicionar Personagem</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <title>CRUD</title>
 </head>
-<style>
-    @font-face {
-        font-family: "teste";
-        src:url(zelda.ttf);
-        font-style: normal;
-        font-weight: 100;
-    }
-    @font-face {
-        font-family: "teste2";
-        src:url(arkham.ttf);
-        font-style: normal;
-        font-weight: 100;  
-    }
-    #titulo {
-        font-family: "teste";
-        font-size: 70px;
-        text-align: center;
-        padding: 1rem;
-        color: #e0dfdc;
-        letter-spacing: .1em;
-        text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 
-                     0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 
-                     0 4px 0 #282828, 0 5px 0 #262626, 
-                     0 6px 0 #242424, 0 7px 0 #222, 
-                     0 8px 0 #202020, 0 9px 0 #1e1e1e, 
-                     0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 
-                     0 12px 0 #181818, 0 13px 0 #161616, 
-                     0 14px 0 #141414, 0 15px 0 #121212, 
-                     0 22px 30px rgba(0,0,0,0.9);
-    }
-    body{
-        background-image:url(img/fundonew.jpeg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-color:#464646;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: 100%;
-        color: #ffffff;
-    }
-
-    label {
-        font-family: "teste2";
-        font-size: 20px;
-        letter-spacing: .2em;
-        text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 
-                     0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 
-                     0 4px 0 #282828, 0 5px 0 #262626, 
-                     0 6px 0 #242424, 0 7px 0 #222, 
-                     0 8px 0 #202020, 0 9px 0 #1e1e1e, 
-                     0 8px 0 #1c1c1c, 0 8px 0 #1a1a1a, 
-                     0 8px 0 #181818, 0 8px 0 #161616, 
-                     0 10px 0 #141414, 0 10px 0 #121212, 
-                     0 1px 1px rgba(0,0,0,0.9);
-    }
-
-
-</style>
 <body>
-    <h1 id="titulo"> Adicionar Personagens </h1>
-    <div class="container">
-        <div class="row col-lg-12">
-            <div class="form-style">
-            <form action="inserir.php" method="POST" enctype="multipart/form-data">
+<div class="container" id="tamanhoContainer">
+    <h4>Formulário de cadastro de Personagens RPG</h4>
+        <form action="inserir.php" method="POST" enctype="multipart/form-data">
+
             <div class="form-group">
                 <label for="nome">Nome do Personagem</label>
                 <input type="text" class="form-control" name="nome" placeholder="Nome do Personagem" autocomplete="off" required>
             </div>
             <div class="form-group">
-                <label for="categoria">Categoria</label>
+                <label>Categoria</label>
                     <select class="form-control" name="categoria" autocomplete="off" required>
 
                         <?php
@@ -107,7 +46,7 @@
                     </select>
             </div>
             <div class="form-group">
-                <label for="armas">Armas</label>
+                <label>Armas</label>
                     <select class="form-control" name="armas" autocomplete="off" required>
 
                         <?php
@@ -135,7 +74,7 @@
                     </select>
             </div>
             <div class="form-group">
-                <label for="itens">Itens</label>
+                <label>Itens</label>
                     <select class="form-control" name="itens" autocomplete="off" required>
 
                         <?php
@@ -163,7 +102,7 @@
                     </select>
             </div>
             <div class="form-group">
-                <label for="tesouro">Tesouros</label>
+                <label>Tesouros</label>
                 <select class="form-control" name="tesouro" autocomplete="off" required>
                 <?php
                                 // abrir php dentro do select para buscar as categorias dentro do banco de dados 
@@ -190,15 +129,15 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="power">Power</label>
+                <label>Power</label>
                 <input type="number" class="form-control" name="power" placeholder="Força do personagem" autocomplete="off" required>
             </div>
             <div class="form-group">
-                <label for="destreza">Destreza</label>
+                <label>Destreza</label>
                 <input type="number" class="form-control" name="destreza" placeholder="Nível de destreza" autocomplete="off" required>
             </div>
             <div class="form-group">
-                <label for="inteli">Inteligência</label>
+                <label>Inteligência</label>
                 <input type="number" class="form-control" name="inteli" placeholder="Nível de inteligência" autocomplete="off" required>
             </div>
             <div class="form-group">
@@ -222,6 +161,10 @@
 
 
     </div>
-                        
-</div>
-</div>
+                         
+
+
+
+<script type="texte/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

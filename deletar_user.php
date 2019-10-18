@@ -4,7 +4,7 @@ include 'conexao.php';
 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM `categoria` WHERE id_categoria = $id";
+$sql = "DELETE FROM `usuario` WHERE usuario_id = $id";
 $deletar = mysqli_query($conexao, $sql);
 
 ?>
@@ -14,6 +14,6 @@ $deletar = mysqli_query($conexao, $sql);
 
 <div class="container">
     <h3> Deletado com sucesso </h3>
-    <a href="listar_categoria.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
+    <a href="listar_usuarios.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
 
 </div>

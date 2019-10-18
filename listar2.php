@@ -8,6 +8,22 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
     <style>
+     
+    body{
+            background-image:url(img/fmred2.jpeg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color:#464646;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: 100%;
+            color: black;
+
+      }
+
+
       h3 {
         text-align: center;
       }
@@ -19,16 +35,25 @@
       }
       .card{
         
-      -webkit-box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 21px 26px 14px 14px rgba(0,0,0,0.81); 
-      box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 21px 26px 14px 14px rgba(0,0,0,0.81);
+        -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 21px -8px 19px 6px rgba(0,0,0,0.32), 21px -8px 19px 6px rgba(0,0,0,0.32); 
+        box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 21px -8px 19px 6px rgba(0,0,0,0.32), 21px -8px 19px 6px rgba(0,0,0,0.32);
 
       }
+
+      ul {
+          list-style-type: none;
+          margin: 0;
+          padding:;
+          
+        }
+
     </style>
-    <title>Listar Produtos</title>
+    <title>Lista de personagens</title>
 </head>
 <body>
+<h2 style="color:white;">Lista de Personagens</h2>
 <div class="container">
-<h3>Lista de Personagens</h3><br>
+<br>
 <div class="row">
                 <?php
                 include 'conexao.php';
@@ -53,14 +78,16 @@
                       <h5 class="card-title">#ID  <?php echo $id_personagens?></h5>
                       <p class="card-text"><?php echo $nome ?></p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><h6 class="card-subtitle mb-2 text-muted">Categoria</h6><?php echo $categoria?></li>
-                      <li class="list-group-item"><h6 class="card-subtitle mb-2 text-muted">Arma</h6><?php echo $armas ?></li>
-                      <li class="list-group-item"><h6 class="card-subtitle mb-2 text-muted">Item</h6><?php echo $itens?></li>
-                      <li class="list-group-item"><h6 class="card-subtitle mb-2 text-muted">Tesouro</h6><?php echo $tesouros?></li>
-                      <li class="list-group-item"><h6 class="card-subtitle mb-2 text-muted">Power</h6><?php echo $power?></li>
-                      <li class="list-group-item"><h6 class="card-subtitle mb-2 text-muted">Destreza</h6><?php echo $destreza?></li>
-                      <li class="list-group-item"><h6 class="card-subtitle mb-2 text-muted">Inteligencia</h6><?php echo $inteli?></li>
+                    <ul>
+                      <li><h6>Categoria</h6><?php echo $categoria?></li>
+                      <li><h6>Arma</h6><?php echo $armas ?></li>
+                      <li><h6>Item</h6><?php echo $itens?></li>
+                      <li><h6>Tesouro</h6><?php echo $tesouros?></li>
+                      <div>
+                        <li><h6 >Power</h6><?php echo $power?></li>
+                        <li><h6 >Destreza</h6><?php echo $destreza?></li>
+                        <li><h6 >Inteligencia</h6><?php echo $inteli?></li>
+                      </div>
                     </ul>
                     <div class="card-body">
                       <a class="btn btn-primary btn-sm card-link " style="color:#ffffff" href="editar.php?id=<?php echo $id_personagens?>" 
@@ -77,6 +104,11 @@
                     <a href="menu.php" role="button" class="btn btn-sm btn-primary">voltar</a>
                   </div>
 
+
+
+
+
+                  
 
 
 

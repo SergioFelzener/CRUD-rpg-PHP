@@ -48,11 +48,11 @@
   }
   
   .title-white {
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
   .title-black {
-    color: black;
+    color: rgb(0, 0, 0);
   }
   
   @media all and (max-width: 500px) {
