@@ -80,7 +80,7 @@
                   <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar.php?id=<?php echo $id_personagens ?>" 
                     role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; </a></td>
 
-                  <td><a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse Personagem?' href="deletar.php?id=<?php echo $id_personagens?>" 
+                  <td><a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar.php?id=<?php echo $id_personagens?>" 
                      role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; </a></td>
                 </tr>
                 

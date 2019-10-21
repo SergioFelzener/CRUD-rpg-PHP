@@ -57,7 +57,7 @@
                   <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_categoria.php?id=<?php echo $id_categoria ?>" 
                     role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
 
-                    <a class="btn btn-danger btn-sm" style="color:#ffffff" href="deletar_categoria.php?id=<?php echo $id_categoria ?>" 
+                    <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_categoria.php?id=<?php echo $id_categoria ?>" 
                     role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a></td>
                 </tr>
                 
@@ -78,7 +78,11 @@
 
 
 
-<script type="texte/javascript" src="js/bootstrap.js"></script>
+          <script type="texte/javascript" src="js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script src="js/confirm_delete.js"></script>
     
 </body>
 </html>
