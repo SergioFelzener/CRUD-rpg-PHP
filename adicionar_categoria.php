@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adicionar_categoria.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/preview_img.js"></script>
     <title>Adicionar Categoria</title>
     <style>
     @font-face {
@@ -65,6 +67,11 @@
                      0 10px 0 #141414, 0 10px 0 #121212, 
                      0 1px 1px rgba(0,0,0,0.9);
     }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     </style>
 </head>
@@ -80,7 +87,8 @@
                 <div class="form-group">
                     <label for="img">Imagem</label>
                 <div>
-                    <input type="file" class="form-control-file" name="img" placeholder="Imagem" autocomplete="off">
+                <input type="file"  class="form-control-file" name="img" id="upload" placeholder="Imagem" autocomplete="off" required>
+                <img id="imagem" style="width: 150px">
                 </div><br>
                 <div style="text-align: right">
                     <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
