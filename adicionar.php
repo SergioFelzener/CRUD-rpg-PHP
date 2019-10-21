@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/adicionar.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/preview_img.js"></script>
     <title>Adicionar Personagem</title>
 </head>
 <style>
@@ -64,6 +66,11 @@
                      0 8px 0 #181818, 0 8px 0 #161616, 
                      0 10px 0 #141414, 0 10px 0 #121212, 
                      0 1px 1px rgba(0,0,0,0.9);
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
@@ -204,7 +211,8 @@
             <div class="form-group">
                 <label for="img">Imagem</label>
                 <div>
-                <input type="file" class="form-control-file" name="img" placeholder="Imagem" autocomplete="off" required>
+                <input type="file"  class="form-control-file" name="img" id="upload" placeholder="Imagem" autocomplete="off" required>
+                <img id="imagem" style="width: 150px">
                 </div>
             </div>
             

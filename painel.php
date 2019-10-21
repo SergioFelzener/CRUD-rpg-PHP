@@ -24,5 +24,5 @@ $array = mysqli_fetch_array($buscar);
 $nivel = $array ['nivel'];
 ?>
 
-<h6><a href="logout.php" class="float-left" style="margin-left:40px;">Fazer o LOGOUT</a></h6><br><br>
+<h6><a href="logout.php" class="float-left" style="margin-left:40px;">Sair </a></h6><br><br>
 

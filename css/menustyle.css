@@ -63,8 +63,8 @@
   }
 
   #titulo {
-    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8, 0px 14px 5px rgba(252, 250, 255, 0.51), -6px -5px 5px rgba(240, 231, 237, 0.7);
-    font-size: 16px;
+    text-shadow: 5px 1px 5px #000000, 1px 10px 5px #000000, 5px 14px 5px rgba(0, 0, 0, 0.51), -6px -5px 5px rgba(0, 0, 0, 0.7);
+    font-size: 17px;
   }
   
   

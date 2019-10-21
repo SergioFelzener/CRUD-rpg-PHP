@@ -1,0 +1,48 @@
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; /* Cor do Fundo */
+    overflow-x: hidden; /* Desativar rolagem horizontal */
+    padding-top: 60px; /* Coloque o conteúdo 60px a partir do topo */
+    transition: 0.5s; /* Efeito de transição de 0,5 segundo para deslizar no sidenav */
+  }
+  
+  /* Os links do menu de navegação */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15x;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* Ao passar o mouse sobre os links de navegação, altere a cor */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Posicione e estilize o botão Fechar (canto superior direito) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: px;
+  }
+  
+  /* Estilo do conteúdo da página - use-o para empurrar o conteúdo da página para a direita quando abrir a navegação lateral */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* Em telas menores, em que a altura é inferior a 450px, altere o estilo do sidenav (menos preenchimento e tamanho de fonte menor) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
