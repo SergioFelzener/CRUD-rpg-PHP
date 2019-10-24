@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/adicionar_armas.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="js/preview_img.js"></script>
+    <script type="texte/javascript" src="js/bootstrap.js"></script>
     <title>Adicionar Armas</title>
-   </head>
+</head>
 <body>
     <h1 id="titulo"> Cadastro de Armas</h1>
     <div class="container">
@@ -23,23 +24,15 @@
                 <div class="form-group">
                     <label for="img">Imagem</label>
                 <div>
-                <input type="file"  class="form-control-file" name="img" id="upload" placeholder="Imagem" autocomplete="off">
-                <img id="imagem" style="width: 150px">
+                    <input type="file"  class="form-control-file" name="img" id="upload" placeholder="Imagem" autocomplete="off">
+                    <img id="imagem" style="width: 150px">
                 </div><br>
                 <div style="text-align: right">
                     <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
                     <button type="submit" id="botao" class="btn btn-sm">cadastrar</button>
                 </div>
-            
             </form>
         </div>
-    </div>
-
-
-
-
-
-<script type="texte/javascript" src="js/bootstrap.js"></script>
-    
+    </div>    
 </body>
 </html>

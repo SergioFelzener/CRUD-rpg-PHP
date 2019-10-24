@@ -1,16 +1,5 @@
-
-
-<!-- sidenav -->
-<div id="mySidenav" class="sidenav">
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<a href="#"><?php include "painel.php"?></a>
-</div>
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,12 +27,13 @@
 </head>
 
 <body>
+<?php include("painel.php"); ?>
+
 <!-- Botao para abrir sidenav -->
-<span style="font-size:50px;cursor:pointer" onclick="openNav()"><img src="https://img.icons8.com/cute-clipart/64/000000/list.png"></span>
   <div class="container">
     <div class="cards-list">
       <div class="card 1">
-        <div class="card_image"> <img src="img/person.png" style="height: 100%;"/> </div>
+        <div class="card_image"><img src="img/person.png" style="height: 100%;"/></div>
         <div class="card_title ">
           <p id="titulo">Adicionar Personagem</p>
           <a href="adicionar.php" class="btn btn-success">Adicionar</a>
@@ -58,7 +48,6 @@
           <a href="adicionar_armas.php" class="btn btn-success">Adicionar</a>
         </div>
       </div>
-
       <div class="card 3">
         <div class="card_image">
           <img src="img/itenss.jpg" style="height: 100%;"/>
@@ -68,7 +57,6 @@
           <a href="adicionar_itens.php" class="btn btn-success">Adicionar</a>
         </div>
       </div>
-
       <div class="card 4">
         <div class="card_image">
           <img src="img/tesouro.jpg" style="height: 100%;"/>
@@ -78,19 +66,15 @@
           <a href="adicionar_tesouro.php" class="btn btn-success">Adicionar</a>
         </div>
       </div>
-
     </div>
     <div class="cards-list">
-
       <div class="card 5">
         <div class="card_image"> <center><img src="img/listar2.png" style="height: 100%; width: 100%; text-align: center;"/></center></div>
         <div class="card_title">
           <p id="titulo">Listar Personagens</p>
           <a href="listar.php" class="btn btn-primary">Listar</a>
         </div>
-
       </div>
-
       <div class="card 6">
         <div class="card_image">
         <img src="img/listar_armas.jpg" style="height: 100%; width: 100%; text-align: center;"/>
@@ -99,9 +83,7 @@
           <p id="titulo">Listar Armas</p>
           <a href="listar_armas.php" class="btn btn-primary">Listar</a>
         </div>
-
       </div>
-
       <div class="card 7">
         <div class="card_image">
         <img src="img/listaritens.jpg" style="height: 100%; width: 100%; text-align: center;"/>
@@ -110,9 +92,7 @@
           <p id="titulo">Listar Itens</p>
           <a href="listar_itens.php" class="btn btn-primary">Listar</a>
         </div>
-
       </div>
-
       <div class="card 8">
         <div class="card_image">
         <img src="img/listartesouro.jpg" style="height: 100%; width: 100%; text-align: center;"/>
@@ -122,10 +102,8 @@
           <a href="listar_tesouros.php" class="btn btn-primary">Listar</a>
         </div>
       </div>
-
     </div>
     <div class="cards-list">
-
       <div class="card 9">
         <div class="card_image"> <img src="img/listarcategoria.jpg" style="height: 100%;"/> </div>
         <div class="card_title ">
@@ -133,7 +111,6 @@
           <a href="adicionar_categoria.php" class="btn btn-success">Adicionar</a>
         </div>
       </div>
-
       <div class="card 10">
         <div class="card_image">
         <img src="img/categorias.jpg" style="height: 100%; width: 100%; text-align: center;"/>
@@ -145,7 +122,7 @@
       </div>
       <?php
 
-          if ($nivel == 1){
+      if ($_SESSION['nivel'] == 1) {
 
         ?>
 
@@ -159,7 +136,8 @@
         </div>
       </div>
 
-      <?php } ?>
+      <?php 
+    } ?>
 
       <div class="card 12">
         <div class="card_image">
@@ -173,11 +151,6 @@
 
     </div>
   </div>
-
-
-
-
-
 </body>
 
 </html>

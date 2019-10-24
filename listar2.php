@@ -32,19 +32,20 @@
       }
       p {
         text-align: center;
+        
       }
       .card{
         
         -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 21px -8px 19px 6px rgba(0,0,0,0.32), 21px -8px 19px 6px rgba(0,0,0,0.32); 
         box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 21px -8px 19px 6px rgba(0,0,0,0.32), 21px -8px 19px 6px rgba(0,0,0,0.32);
-
+        
       }
 
       ul {
           list-style-type: none;
           margin: 0;
-          padding:;
-          
+          text-align: center;
+
         }
 
     </style>
@@ -83,10 +84,10 @@
                       <li><h6>Arma</h6><?php echo $armas ?></li>
                       <li><h6>Item</h6><?php echo $itens?></li>
                       <li><h6>Tesouro</h6><?php echo $tesouros?></li>
-                      <div>
-                        <li><h6 >Power</h6><?php echo $power?></li>
-                        <li><h6 >Destreza</h6><?php echo $destreza?></li>
-                        <li><h6 >Inteligencia</h6><?php echo $inteli?></li>
+                      <div class="row">
+                        <li class='col-2'><h6>Power</h6><?php echo $power?></li>
+                        <li class='col-4'><h6 >Destreza</h6><?php echo $destreza?></li>
+                        <li class='col-4'><h6 >Inteligencia</h6><?php echo $inteli?></li>
                       </div>
                     </ul>
                     <div class="card-body">

@@ -3,11 +3,11 @@
 session_start();
 
 //incluindo o arquivo de conexaoPHP
-include ('conexao.php');
+include('conexao.php');
 
 // validacao caso usuario e senha estejam vazios, retorna ao INDEX...
 if (empty($_POST['usuario']) || empty($_POST['senha'])) {
-    header ('Location: login.php');
+    header('Location: index.php');
     exit();
 }
 // Criando variaveis de usuario e senha usando funcao mysqlirealescapestring, proteje conta ataque de SQL injection contra login, realizando validacoes para saber se esta vindo algum ataque de SQL Injection ...
@@ -15,7 +15,7 @@ $usuario = mysqli_real_escape_string($conexao, $_POST['usuario']); // POST do qu
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']); // POST da senha que esta sendo digitado
 
 // criando query com DB para saber retorno do que foi digitado se esta dentro do meu banco de dados.
-$query = " select usuario_id, nome from usuario where usuario = '{$usuario}' and senha = md5 ('{$senha}') and status ='Ativo'";
+$query = " select usuario_id, nome, nivel from usuario where usuario = '{$usuario}' and senha = md5 ('{$senha}') and status ='Ativo'";
 
 // executando a query par ver retorno desativado !!!!
 // echo $query;exit;
@@ -30,9 +30,11 @@ $row = mysqli_num_rows($result);
 // executando a row par ver retorno desativado !!!! teste para saber se tem retorno dentro do DB.
 // echo $row;exit;
 //se autenticar direciona para painel.php
-if ($row == 1 ) {
+if ($row == 1) {
     $usuario_db = mysqli_fetch_assoc($result);
     $_SESSION['nome'] = $usuario_db['nome'];
+    $_SESSION['usuario_id'] = $usuario_db['usuario_id'];
+    $_SESSION['nivel'] = $usuario_db['nivel'];
     header('Location: menu.php');
     exit();
 // caso nao autentique 
@@ -40,5 +42,4 @@ if ($row == 1 ) {
     $_SESSION['nao_autenticado'] = true;
     header('Location: index.php');
     exit();
-
 }

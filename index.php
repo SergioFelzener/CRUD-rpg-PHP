@@ -15,8 +15,6 @@ session_start();
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript">
-    </script>
 </head>
 
 <body>
@@ -27,10 +25,10 @@ session_start();
                     <h3><center>Login</center></h3>
                
                 <?php
-                    if (isset($_SESSION['nao_autenticado'])):
+                if (isset($_SESSION['nao_autenticado'])) :
                 ?>
                 <div class="erro">
-                    <p id="msg">ERRO: Usuário ou Senha inválidos</p>
+                    <span id="msg">ERRO: Usuário ou Senha inválidos</span>
                 </div>
                 <?php
                 endif;
@@ -44,7 +42,6 @@ session_start();
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
                             <input type="text" name="usuario" class="form-control" placeholder="username" required="required">
-
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">

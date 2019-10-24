@@ -32,9 +32,6 @@ if (isset($_FILES['img'])) {
     print "Tipo de arquivo não permitido";
 }
 
-
-
-
 $sql = "INSERT INTO `personagens`(`nome`, `categoria`, `armas`, `itens`, `tesouros`, `power`, `destreza`, `inteli`, `img`)  
         VALUES ('$nome', '$categoria', '$armas', '$itens', '$tesouros', $power, $destreza, $inteli, '$novo_nome')"; 
 
@@ -53,8 +50,8 @@ $inserir = mysqli_query($conexao, $sql);
 
 <div class="container">
     <h4>PERSONAGEM CADASTRADO COM SUCESSO</h4>
-<div style="padding-top: 20px">
-    <a href="adicionar.php" role="button" class="btn btn-sm">Cadastrar novo PERSONAGEM</a>
-    <a href="menu.php" role="button" class="btn btn-sm">Voltar o menu </a>
-</div>
+    <div style="padding-top: 20px">
+        <a href="adicionar.php" role="button" class="btn btn-sm">Cadastrar novo PERSONAGEM</a>
+        <a href="menu.php" role="button" class="btn btn-sm">Voltar o menu </a>
+    </div>
 </div>
