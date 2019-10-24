@@ -15,13 +15,13 @@ $atualizar = mysqli_query($conexao, $sql);
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/adicionar_armas.css">
+        <link rel="stylesheet" href="css/inserir_armas.css">
         <title>Inserir Categoria</title>
     </head>
         <body>
             <div class="container" stlye="text-align: center;">
                 <div>
-                    <h2> Arma Editada com sucesso </h2>
+                    <h1 id="titulo"> Arma Editada com sucesso </h1>
                 </div>
                 <div>
                     <a href="listar_armas.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>

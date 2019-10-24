@@ -35,15 +35,15 @@
 
                             
                             <div class="form-group">
-                                <label>Id Arma</label>
-                                <input type="text" class="form-control" name="id" value = "<?php echo $id_armas ?>" readonly>
-                                <label>Nome da Arma</label>
+                                <label for="id">Id Arma</label>
+                                <input type="text" class="form-control" name="id" style="color: red;" value = "<?php echo $id_armas ?>" readonly>
+                                <label for="nome_arma">Nome da Arma</label>
                                 <input type="text" class="form-control" name="nome_arma" value = "<?php echo $nome_arma ?>">   
                             </div>
                             <div class="form-group">
                
                             <div id="btnCadastro">
-                                <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
+                                <a href="listar_armas.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
                                 <button type="submit" id="botao" class="btn btn-sm">atualizar</button>
                             </div>
                 <?php  } ?>
