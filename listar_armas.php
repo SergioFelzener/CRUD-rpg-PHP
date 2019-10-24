@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/apagar_armas.css">
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
     <title>Listar Armas</title>
 </head>
@@ -28,12 +29,13 @@
 <body>
 <div class="container">
 
-<h3>Lista de Armas</h3>
-     <table class="table table-sm table-dark">
+<h1 id="titulo">Lista de Armas</h1>
+     <table class="table table-dark table-striped">
             <thead>
               <tr>
                 <th scope="col">#id_armas</th>
                 <th scope="col">Nome Arma</th>
+                <th scope="col">Imagem</th>
                 <th scope="col">Ação</th>
              </tr>
             </thead>
@@ -54,6 +56,7 @@
                 <tr>
                   <td><?php echo $id_armas ?></td>
                   <td><?php echo $nomearma ?></td>
+                  <td><?php echo "teste"?></td>
              
                   <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_armas.php?id=<?php echo $id_armas ?>" 
                     role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
@@ -73,7 +76,7 @@
             
           </table>
           <div>
-          <a href="menu.php" role="button" class="btn btn-sm btn-primary">voltar</a>
+          <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
           </div>
 
 
