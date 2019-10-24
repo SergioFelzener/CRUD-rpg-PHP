@@ -70,8 +70,7 @@
                   <td><?php echo $status ?></td>
                   <td><?php echo $nivel ?></td>
                     <!-- &nbsp; &nbsp dando espaço-->
-                  <td><a class="btn btn-success btn-sm" style="color:#ffffff" href="_editar_usuario.php?id=<?php echo $id_usuario ?> &nivel=1" 
-                    role="button"><i class="far fa-thumbs-up"></i>&nbsp; &nbsp; Editar</a>
+                  <td>
                     <a class="btn btn-danger btn-sm" style="color:#ffffff" href="deletar_user.php?id=<?php echo $id_usuario ?>" 
                     role="button"><i class="fas fa-hand-middle-finger"></i>&nbsp; Apagar</a></td>
                 </tr>

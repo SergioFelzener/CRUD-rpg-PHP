@@ -85,7 +85,7 @@
             <div class="form-group">
                     <label for="img">Imagem</label>
                 <div>
-                <input type="file"  class="form-control-file" name="img" id="upload" placeholder="Imagem" autocomplete="off" required>
+                <input type="file"  class="form-control-file" name="img" id="upload" placeholder="Imagem" autocomplete="off">
                 <img id="imagem" style="width: 150px">
                 </div><br>
             <div style="text-align: right">
@@ -96,9 +96,6 @@
 
         </form>
     </div>
-
-
-
 
 
 <script type="texte/javascript" src="js/bootstrap.js"></script>

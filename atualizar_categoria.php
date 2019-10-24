@@ -12,12 +12,35 @@ $atualizar = mysqli_query($conexao, $sql);
 
 ?>
 
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/style.css">
-
-<div class="container">
-    <h3> Atualizado com sucesso </h3>
-    <a href="listar_categoria.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
-
-</div>
-
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/inserir_armas.css">
+        <title>Inserir Categoria</title>
+    </head>
+    <style>
+         body{
+            background-image:url(img/categoria2.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color:#464646;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: 100%;
+            color: #ffffff;
+        }
+       
+    </style>
+        <body>
+            <div class="container" stlye="text-align: center;">
+                <div>
+                    <h2> Categoria Editada com sucesso </h2>
+                </div>
+                <div>
+                    <a href="listar_categoria.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>
+                </div>
+            </div>
+        </body>
+</html>
