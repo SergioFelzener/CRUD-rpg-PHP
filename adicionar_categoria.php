@@ -83,12 +83,6 @@
                 <label for="categoria">Categoria</label>
                 <div class="form-group">
                     <input type="text" name="categoria" class="form-control"  placeholder="Digite o nome da Categoria" autocomplete="off" required="required">
-                </div>
-                <div class="form-group">
-                    <label for="img">Imagem</label>
-                <div>
-                <input type="file"  class="form-control-file" name="img" id="upload" placeholder="Imagem" autocomplete="off">
-                <img id="imagem" style="width: 150px">
                 </div><br>
                 <div style="text-align: right">
                     <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>

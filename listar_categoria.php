@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/inserir_itens.css">
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
     <title>Listar Categorias</title>
 </head>
@@ -27,8 +28,8 @@
 <body>
 <div class="container">
 
-<h3>Lista de Categorias</h3>
-     <table class="table table-sm table-dark">
+<h1 id="titulo">Lista de Categorias</h1>
+    <table class="table table-dark table-striped">
             <thead>
               <tr>
                 <th scope="col">#id_categoria</th>
@@ -72,7 +73,7 @@
             
           </table>
           <div>
-          <a href="menu.php" role="button" class="btn btn-sm btn-primary">voltar</a>
+          <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
           </div>
 
 

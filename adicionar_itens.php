@@ -41,7 +41,7 @@
                      0 22px 30px rgba(0,0,0,0.9);
     }
     body{
-        background-image:url(img/adicionar_itens.png);
+        background-image:url(img/adicionar_itens.jpg);
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;

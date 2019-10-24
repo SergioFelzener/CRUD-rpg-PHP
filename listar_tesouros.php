@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/inserir_itens.css">
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
     <title>Listar Tesouros</title>
 </head>
@@ -27,12 +28,13 @@
 <body>
 <div class="container">
 
-<h3>Lista de Tesouros</h3>
-     <table class="table table-sm table-dark">
+<h1 id="titulo">Lista de Tesouros</h1>
+     <table class="table table-dark table-striped">
             <thead>
               <tr>
                 <th scope="col">#id_tesouro</th>
                 <th scope="col">Nome Tesouro</th>
+                <th scope="col">Imagem</th>
                 <th scope="col">Ação</th>
              </tr>
             </thead>
@@ -53,6 +55,7 @@
                 <tr>
                   <td><?php echo $id_tesouro ?></td>
                   <td><?php echo $nome_tesouro ?></td>
+                  <td><?php echo "teste" ?></td>
              
                   <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_tesouro.php?id=<?php echo $id_tesouro ?>" 
                     role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
@@ -72,7 +75,7 @@
             
           </table>
           <div>
-          <a href="menu.php" role="button" class="btn btn-sm btn-primary">voltar</a>
+          <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
           </div>
 
 

@@ -8,11 +8,7 @@ $sql = "INSERT INTO categoria(nome_categoria) values ('$categoria')";
 $inserir = mysqli_query($conexao, $sql);
 
 ?>
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/style.css">
 
-
-<html lang="pt-br">
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/inserir_armas.css">
@@ -36,7 +32,7 @@ $inserir = mysqli_query($conexao, $sql);
         <body>
             <div class="container" stlye="text-align: center;">
                 <div>
-                    <h2> Categoria Criada com sucesso </h2>
+                    <h1 id="titulo"> Categoria Criada com sucesso </h2>
                 </div>
                 <div>
                     <a href="adicionar_categoria.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>

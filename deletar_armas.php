@@ -13,7 +13,7 @@ $deletar = mysqli_query($conexao, $sql);
 <link rel="stylesheet" href="css/apagar_armas.css">
 
 <div class="container">
-    <h1 id="titulo"> Arma apagada com sucesso </h1>
+    <h1 id="titulo">Arma apagada com sucesso</h1>
     <a href="listar_armas.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
 
 </div>

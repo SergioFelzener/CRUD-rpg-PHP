@@ -14,7 +14,7 @@ $inserir = mysqli_query($conexao, $sql);
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/inserir_itens.css">
-        <title>Inserir Arma</title>
+        <title>Inserir Tesouro</title>
     </head>
     <style>
          body{
@@ -34,13 +34,14 @@ $inserir = mysqli_query($conexao, $sql);
         <body>
             <div class="container" stlye="text-align: center;">
                 <div>
-                    <h2> Tesouro criado com sucesso </h2>
-                </div><br>
+                    <h1 id="titulo"> Tesouro Criado com sucesso </h1>
+                </div>
                 <div>
-                    <a href="adicionar_tesouro.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>
+                    <a href="adicionar_tesouro.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
                 </div>
             </div>
         </body>
+</html>
 </html>
 
 

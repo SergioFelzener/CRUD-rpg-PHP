@@ -15,13 +15,13 @@ $atualizar = mysqli_query($conexao, $sql);
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/adicionar_itens.css">
-        <title>Atualizar Itens</title>
+        <link rel="stylesheet" href="css/apagar_itens.css">
+        <title>Inserir Itens</title>
     </head>
-         <body>
+        <body>
             <div class="container" stlye="text-align: center;">
                 <div>
-                    <h2> Item Editado com sucesso </h2>
+                    <h1 id="titulo">Item Editado com sucesso </h1>
                 </div>
                 <div>
                     <a href="listar_itens.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>

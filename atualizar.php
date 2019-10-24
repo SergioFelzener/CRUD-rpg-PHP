@@ -21,12 +21,20 @@ $atualizar = mysqli_query($conexao, $sql);
 
 ?>
 
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/style.css">
-
-<div class="container">
-    <h3> Atualizado com sucesso </h3>
-    <a href="listar.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
-
-</div>
-
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/apagar_itens.css">
+        <title>Atualizar Personagens</title>
+    </head>
+        <body>
+            <div class="container" stlye="text-align: center;">
+                <div>
+                    <h1 id="titulo">Personagem atualizado com sucesso </h1>
+                </div>
+                <div>
+                    <a href="listar.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>
+                </div>
+            </div>
+        </body>
+</html>

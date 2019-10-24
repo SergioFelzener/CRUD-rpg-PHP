@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/apagar_armas.css">
+    <link rel="stylesheet" href="css/inserir_itens.css">
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
     <title>Listar Armas</title>
 </head>

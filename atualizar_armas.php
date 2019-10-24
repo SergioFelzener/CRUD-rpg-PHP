@@ -15,7 +15,7 @@ $atualizar = mysqli_query($conexao, $sql);
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/inserir_armas.css">
+        <link rel="stylesheet" href="css/apagar_itens.css">
         <title>Inserir Categoria</title>
     </head>
         <body>

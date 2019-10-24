@@ -15,7 +15,7 @@ $atualizar = mysqli_query($conexao, $sql);
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/inserir_armas.css">
+        <link rel="stylesheet" href="css/apagar_itens.css">
         <title>Inserir Categoria</title>
     </head>
     <style>
@@ -36,7 +36,7 @@ $atualizar = mysqli_query($conexao, $sql);
         <body>
             <div class="container" stlye="text-align: center;">
                 <div>
-                    <h2> Categoria Editada com sucesso </h2>
+                    <h1 id="titulo"> Categoria Editada com sucesso </h1>
                 </div>
                 <div>
                     <a href="listar_categoria.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>

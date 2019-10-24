@@ -13,12 +13,15 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/adicionar.css">
         <title>CRUD</title>
     </head>
     <body>
-    <div class="container" id="tamanhoContainer">
-        <h4>Edição de Personagem</h4>
-            <form action="atualizar.php" method="POST">
+    <div class="container">
+        <h1 id="titulo">Editar</h1>
+            <div class="row col-lg-12">
+                <div class="form-style">
+                    <form action="atualizar.php" method="POST">
                 <?php
 
                     $sql = "SELECT * FROM `personagens` WHERE id_personagens = $id";
@@ -153,6 +156,8 @@
              <?php       } ?>
 
             </form>
+        </div>
+    </div>
 
 
 
