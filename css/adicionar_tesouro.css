@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "teste";
+    src:url(../font/zelda.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: "teste2";
+    src:url(../font/arkham.ttf);
+    font-style: normal;
+    font-weight: 100;  
+}
+#titulo {
+    font-family: "teste";
+    font-size: 70px;
+    text-align: center;
+    padding: 1rem;
+    color: #e0dfdc;
+    letter-spacing: .1em;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 
+                 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 
+                 0 4px 0 #282828, 0 5px 0 #262626, 
+                 0 6px 0 #242424, 0 7px 0 #222, 
+                 0 8px 0 #202020, 0 9px 0 #1e1e1e, 
+                 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 
+                 0 12px 0 #181818, 0 13px 0 #161616, 
+                 0 14px 0 #141414, 0 15px 0 #121212, 
+                 0 22px 30px rgba(0,0,0,0.9);
+}
+body{
+    background-image:url(../img/adicionar_tesouros.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:#464646;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: 100%;
+    color: #ffffff;
+}
+
+label {
+    font-family: "teste2";
+    font-size: 20px;
+    letter-spacing: .2em;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 
+                 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 
+                 0 4px 0 #282828, 0 5px 0 #262626, 
+                 0 6px 0 #242424, 0 7px 0 #222, 
+                 0 8px 0 #202020, 0 9px 0 #1e1e1e, 
+                 0 8px 0 #1c1c1c, 0 8px 0 #1a1a1a, 
+                 0 8px 0 #181818, 0 8px 0 #161616, 
+                 0 10px 0 #141414, 0 10px 0 #121212, 
+                 0 1px 1px rgba(0,0,0,0.9);
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+    max-width: 350px;
+    height: 100%;
+	align-content: center;
+	padding-bottom: 6%;
+	padding-top: 2%;
+    }
+
+.form-style{
+	max-width: 450px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style label{
+	display:block;
+	margin-bottom: 10px;
+}
+.form-style label > span{
+	float: left;
+	width: 100px;
+	color: #F072A9;
+	font-weight: bold;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px #fff;
+}
+.form-style fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #FFD2D2;
+	padding: 20px;
+	background: #FFF4F4;
+	box-shadow: inset 0px 0px 15px #FFE5E5;
+	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+
+.form-style textarea{
+	width:250px;
+	height:100px;
+}
+.form-style input[type=text],
+.form-style input[type=date],
+.form-style input[type=datetime],
+.form-style input[type=number],
+.form-style input[type=search],
+.form-style input[type=time],
+.form-style input[type=url],
+.form-style input[type=email],
+.form-style select, 
+.form-style textarea{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid rgb(66, 55, 82);
+	outline: none;
+	color: #040401;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px #4e1467;
+	-moz-box-shadow: inset 1px 1px 4px rgb(21, 18, 72);
+	-webkit-box-shadow: inset 1px 1px 4px #232398;
+	background: rgb(201, 201, 201);
+	width:100%;
+}
+.form-style  input[type=submit],
+.form-style  input[type=button]{
+	background: rgb(130, 181, 244);
+	border: 1px solid rgb(9, 99, 255);
+	padding: 5px 15px 5px 15px;
+	color: rgb(203, 237, 255);
+	box-shadow: inset -1px -1px 3px #FF62A7;
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+}
+.required{
+	color:red;
+	font-weight:normal;
+	
+}
+#botao {
+    background-color: #E50F87;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+#botao:hover{
+	background-color: rgb(255, 0, 217);
+	color: yellow;
+    font-weight: bold;
+
+}
+

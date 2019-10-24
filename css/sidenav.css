@@ -5,7 +5,7 @@
     z-index: 1; 
     top: 0; 
     left: 0;
-    background-color: #111; /* Cor do Fundo */
+    background-color:rgb(0,0,0,0.3); /* Cor do Fundo */
     overflow-x: hidden; /* Desativar rolagem horizontal */
     padding-top: 60px; /* Coloque o conteúdo 60px a partir do topo */
     transition: 0.5s; /* Efeito de transição de 0,5 segundo para deslizar no sidenav */
@@ -16,7 +16,7 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 15x;
-    color: #818181;
+    color: #a8fdf9;
     display: block;
     transition: 0.3s;
   }
