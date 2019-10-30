@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sidenav.css">
+    <script src="js/sidenav.js"></script>
     <style>
      
     body{
@@ -47,11 +49,14 @@
           text-align: center;
 
         }
-
+        h2{
+          text-align: center;
+        }
     </style>
     <title>Lista de personagens</title>
 </head>
 <body>
+<?php include("painel.php"); ?>
 <h2 style="color:white;">Lista de Personagens</h2>
 <div class="container">
 <br>

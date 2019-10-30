@@ -22,7 +22,7 @@ session_start();
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header">
-                    <h3><center>Login</center></h3>
+                    <h3>Login</h3>
                
                 <?php
                 if (isset($_SESSION['nao_autenticado'])) :

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/inserir_itens.css">
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sidenav.css">
+    <script src="js/sidenav.js"></script>
     <title>Listar Armas</title>
 </head>
 <style>
@@ -27,8 +29,8 @@
 </style>
 
 <body>
+<?php include("painel.php");?>
 <div class="container">
-
 <h1 id="titulo">Lista de Armas</h1>
      <table class="table table-dark table-striped">
             <thead>

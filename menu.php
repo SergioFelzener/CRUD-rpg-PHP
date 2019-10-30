@@ -29,7 +29,6 @@
 <body>
 <?php include("painel.php"); ?>
 
-<!-- Botao para abrir sidenav -->
   <div class="container">
     <div class="cards-list">
       <div class="card 1">
@@ -69,7 +68,7 @@
     </div>
     <div class="cards-list">
       <div class="card 5">
-        <div class="card_image"> <center><img src="img/listar2.png" style="height: 100%; width: 100%; text-align: center;"/></center></div>
+        <div class="card_image"><img src="img/listar2.png" style="height: 100%; width: 100%; text-align: center;"/></div>
         <div class="card_title">
           <p id="titulo">Listar Personagens</p>
           <a href="listar.php" class="btn btn-primary">Listar</a>

@@ -10,9 +10,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="js/preview_img.js"></script>
     <script type="texte/javascript" src="js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sidenav.css">
+    <script src="js/sidenav.js"></script>
     <title>Adicionar Armas</title>
 </head>
 <body>
+    <?php include("painel.php"); ?>
     <h1 id="titulo"> Cadastro de Armas</h1>
     <div class="container">
         <div class="row col-lg-12">

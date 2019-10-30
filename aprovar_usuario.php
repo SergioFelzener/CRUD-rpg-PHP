@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sidenav.css">
+    <script src="js/sidenav.js"></script>
     <title>Aprovar usuário</title>
 </head>
 <style>
@@ -25,8 +27,8 @@
 
 </style>
 <body>
+<?php include("painel.php");?>
 <div class="container">
-
 <h3>(ADMINISTRADOR) Aprovar Usuário</h3>
      <table class="table table-sm table-dark">
             <thead>
