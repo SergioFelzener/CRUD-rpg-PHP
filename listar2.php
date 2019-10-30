@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="texte/javascript" src="js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+    <script src="js/confirm_delete.js"></script>
     <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
     <link rel="stylesheet" type="text/css" href="css/sidenav.css">
     <script src="js/sidenav.js"></script>
@@ -109,20 +114,8 @@
                   <div>
                     <a href="menu.php" role="button" class="btn btn-sm btn-primary">voltar</a>
                   </div>
-
-
-
-
-
-                  
-
-
-
-<script type="texte/javascript" src="js/bootstrap.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
-<script src="js/confirm_delete.js"></script>
-    
-</body>
+                  <footer>
+                    <?php include 'footer.php';?>
+                  </footer>  
+  </body>
 </html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adicionar_itens.css">
+    <script type="texte/javascript" src="js/bootstrap.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="js/preview_img.js"></script>
     <link rel="stylesheet" type="text/css" href="css/sidenav.css">
@@ -99,9 +100,8 @@
 
         </form>
     </div>
-
-
-<script type="texte/javascript" src="js/bootstrap.js"></script>
-    
+    <footer>
+      <?php include 'footer.php';?>
+    </footer> 
 </body>
 </html>

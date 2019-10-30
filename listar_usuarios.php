@@ -79,15 +79,13 @@
                   
                   <?php
                   //abrindo novamente a tag php e fechando a {} do while apos o td pois o laco vai adicionar elementos ao TD.
-
                   } ?>
-
-
-
                   </tr>
-              
           </table>
             <a href="menu.php" role="button" class="btn btn-sm btn-primary">voltar</a>
       </div>
+      <footer>
+            <?php include 'footer.php';?>
+          </footer>  
     </body>
   </html>

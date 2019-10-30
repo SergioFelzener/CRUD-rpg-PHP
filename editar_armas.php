@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adicionar_armas.css">
+    <script type="texte/javascript" src="js/bootstrap.js"></script>
     <title>Editar Armas</title>
         
 </head>
@@ -54,13 +55,8 @@
             </form>
         </div>
     </div>
-    
-
-
-
-
-
-<script type="texte/javascript" src="js/bootstrap.js"></script>
-    
+    <footer>
+      <?php include 'footer.php';?>
+    </footer>  
 </body>
 </html>
