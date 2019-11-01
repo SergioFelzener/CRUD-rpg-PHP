@@ -83,7 +83,7 @@
             
           </table>
           <div>
-          <a href="menu.php" role="button" class="btn btn-sm btn-primary">voltar</a>
+          <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
           </div>
 
 

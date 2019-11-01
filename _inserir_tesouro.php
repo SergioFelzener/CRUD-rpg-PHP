@@ -42,6 +42,6 @@ $inserir = mysqli_query($conexao, $sql);
             </div>
         </body>
 </html>
-</html>
+
 
 

@@ -65,7 +65,7 @@ img {
     max-width: 350px;
     height: 100%;
 	align-content: center;
-	padding-bottom: 6%;
+	padding-bottom: 15%;
 	padding-top: 2%;
     }
 
@@ -157,4 +157,10 @@ img {
 	color: yellow;
     font-weight: bold;
 
+}
+.fixarfooter {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
 }

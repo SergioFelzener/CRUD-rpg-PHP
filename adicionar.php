@@ -157,7 +157,7 @@
             </div>
         </div>                 
     </div>
-    <footer>
+    <footer class="fixarfooter">
       <?php include 'footer.php';?>
     </footer>
 </body>

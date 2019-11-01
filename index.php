@@ -29,7 +29,7 @@ session_start();
                             if (isset($_SESSION['nao_autenticado'])) :
                                 ?>
                                 <div class="erro">
-                                    <span id="msg">ERRO: Usuário ou Senha inválidos</span>
+                                    <p id="msg">ERRO: Usuário ou Senha inválidos</p>
                                 </div>
                             <?php
                         endif;

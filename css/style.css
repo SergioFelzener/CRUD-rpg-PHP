@@ -1,7 +1,9 @@
-.container-fluid {
-    margin-top: 40px;
-    margin-left: 5%;
-}
+.container{
+    height: 100%;
+	align-content: center;
+	padding-bottom: 15%;
+	padding-top: 2%;
+    }
 
 #tamanhoContainer {
     width: 370px;
