@@ -7,6 +7,12 @@ background-repeat: repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
 }
+.fixarfooter {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
 
 .container{
 max-width: 350px;
@@ -21,7 +27,6 @@ margin-bottom: auto;
 width: 360px;
 background-color: rgba(0,0,0,0.5) !important;
 display: block;
-text-align: center;
 
 }
 #cadastro{
