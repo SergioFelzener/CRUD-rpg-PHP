@@ -7,7 +7,9 @@ include('conexao.php');
 
 // validacao caso usuario e senha estejam vazios, retorna ao INDEX...
 if (empty($_POST['usuario']) || empty($_POST['senha'])) {
-    header('Location: index.php');
+    
+    echo '{"error":"Dados de usuário e senha devem serm preenchidos"}';
+    //header('Location: index.php');
     exit();
 }
 // Criando variaveis de usuario e senha usando funcao mysqlirealescapestring, proteje conta ataque de SQL injection contra login, realizando validacoes para saber se esta vindo algum ataque de SQL Injection ...
@@ -35,11 +37,16 @@ if ($row == 1) {
     $_SESSION['nome'] = $usuario_db['nome'];
     $_SESSION['usuario_id'] = $usuario_db['usuario_id'];
     $_SESSION['nivel'] = $usuario_db['nivel'];
-    header('Location: menu.php');
+
+    echo '{"login":"true"}';
+    //echo '{"nome":"'.$usuario_db['nome'].'", "usuario_id": "'.$usuario_db['usuario_id'].'", "nivel": "'.$usuario_db['nivel'].'", "login": "true"}';
+    //header('Location: menu.php');
     exit();
 // caso nao autentique 
 } else {
     $_SESSION['nao_autenticado'] = true;
-    header('Location: index.php');
+
+    echo '{"error":"Usuário ou senha incorreto!"}';
+    //header('Location: index.php');
     exit();
 }

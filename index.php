@@ -14,6 +14,34 @@ session_start();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+    var x = "";
+    function submitData(){
+        $form = $('#frmLogin');
+
+        $.ajax({
+            method: "POST",
+            url: "login.php",
+            data: $form.serialize(),
+        })
+        .done(function(msg){
+            //console.log(msg);
+            let json = JSON.parse(msg);
+            if(json.login){
+                $erro = $('.erro');
+                $erro.css("display","none");
+                //alert("Usuário logado com sucesso ... Bem vindo, " + json.nome);
+                $(location).attr('href', 'menu.php');
+            }else{
+                $erro = $('.erro');
+                $msg = $('#msg');
+                $msg.html("Erro: " + json.error);
+                $erro.css("display","block");
+            }
+        });
+        return false;
+    }
+    </script>
 </head>
 
 <body>
@@ -24,20 +52,12 @@ session_start();
                     <div class="card">
                         <div class="card-header">
                             <h1>Login</h1>
-
-                            <?php
-                            if (isset($_SESSION['nao_autenticado'])) :
-                                ?>
-                                <div class="erro">
-                                    <p id="msg">ERRO: Usuário ou Senha inválidos</p>
+                                <div class="erro" style="display:none;">
+                                    <p id="msg"></p>
                                 </div>
-                            <?php
-                        endif;
-                        unset($_SESSION['nao_autenticado']);
-                        ?>
                             <div class="card-body">
                                 <!--Apontando para a pagina login PHP para fazer a validacoes de usuario e senha ACTION metodo POST -->
-                                <form method="post" action="login.php">
+                                <form id="frmLogin" method="post" action="login.php" onsubmit="return submitData()">
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -56,6 +76,7 @@ session_start();
                                     </div><br>-->
                                     <div class="form-group">
                                         <input type="submit" value="Login" class="btn float-right login_btn">
+                                        <!--<a href="#" onclick="submitData()">Submete</a>-->
                                     </div>
                                 </form>
                             </div><br>

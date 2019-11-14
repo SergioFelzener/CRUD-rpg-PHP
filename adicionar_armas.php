@@ -8,13 +8,44 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adicionar_armas.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/preview_img.js"></script>
     <script type="texte/javascript" src="js/bootstrap.js"></script>
     <link rel="stylesheet" type="text/css" href="css/sidenav.css">
     <script src="js/sidenav.js"></script>
     <title>Adicionar Armas</title>
+    <script>
+    function submitData(){
+        $form = $('#frmArma');
+
+        $.ajax({
+            method: "POST",
+            url: "_inserir_armas.php",
+            data: $form.serialize(),
+        })
+        .done(function(data){
+            console.log(data);
+            let json = JSON.parse(data);
+            if(json.armas){
+                alert("deu certo");
+                //$erro = $('.erro');
+                //$erro.css("display","none");
+                //alert("Usuário logado com sucesso ... Bem vindo, " + json.nome);
+                $(location).attr('href', 'listar_armas.php');
+            }else{
+                alert ("Erro: " + json.error);
+               // $erro = $('.erro');
+               // $msg = $('#msg');
+                //$msg.html("Erro: " + json.error);
+               // $erro.css("display","block");
+            }
+        });
+        return false;
+    }
+
+</script>
 </head>
+
 
 <body>
     <main>
@@ -25,10 +56,13 @@
             <h1 id="titulo"> Cadastro de Armas</h1>
             <div class="container">
                 <div class="row col-lg-12">
-                    <form class="form-style" action="_inserir_armas.php" method="POST">
+                    <div class="erro" style="display:none;">
+                        <p id="msg"></p>
+                    </div>
+                    <form id="frmArma" class="form-style" action="_inserir_armas.php" method="POST" onSubmit="return submitData();">
                         <label for="armas">Arma</label>
                         <div class="form-group">
-                            <input type="text" name="armas" class="form-control" placeholder="Digite o nome da Arma" autocomplete="off" required="required">
+                            <input type="text" name="armas" class="form-control" placeholder="Digite o nome da Arma" autocomplete="off" >
                         </div>
                         <br>
                             <div style="text-align: right">
