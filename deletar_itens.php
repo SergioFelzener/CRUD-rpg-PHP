@@ -14,6 +14,6 @@ $deletar = mysqli_query($conexao, $sql);
 
 <div class="container">
     <h1 id="titulo">Item apagado com sucesso</h1>
-    <a href="listar_itens.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
+    <a href="listar_itens.php" class="btn btn-sm btn-primary" style="color: #ffffff">Voltar</a>
 
 </div>

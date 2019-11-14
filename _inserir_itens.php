@@ -22,7 +22,7 @@ $inserir = mysqli_query($conexao, $sql);
                     <h1 id="titulo"> Item Criado com sucesso </h1>
                 </div>
                 <div>
-                    <a href="adicionar_itens.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>
+                    <a href="adicionar_itens.php" class="btn btn-sm btn-primary float-center" style="color: #ffffff">Voltar</a>
                 </div>
             </div>
         </body>

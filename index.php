@@ -23,7 +23,7 @@ session_start();
                 <div class="d-flex justify-content-center h-100">
                     <div class="card">
                         <div class="card-header">
-                            <h3>Login</h3>
+                            <h1>Login</h1>
 
                             <?php
                             if (isset($_SESSION['nao_autenticado'])) :
@@ -60,7 +60,7 @@ session_start();
                             </div><br>
                             <div class="card-footer">
                                 <div class="d-flex justify-content-center links">
-                                    Não tem uma conta?<a href="cadastro_novo.php">Sign Up</a>
+                                    Não tem uma conta?<a href="cadastro_novo.php" style="font-size:14px;">Cadastro Novo</a>
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <a href="#">Esqueceu sua senha?</a>

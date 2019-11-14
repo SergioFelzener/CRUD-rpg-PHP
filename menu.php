@@ -131,7 +131,7 @@
           </div>
           <div class="card_title ">
             <p id="titulo">Aprovar Usuários</p>
-            <a href="aprovar_usuario.php" class="btn btn-danger">Aprovar</a>
+            <a href="aprovar_usuario.php" class="btn btn-success">Aprovar</a>
           </div>
         </div>
 

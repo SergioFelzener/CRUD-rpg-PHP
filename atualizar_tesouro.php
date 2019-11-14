@@ -24,7 +24,7 @@ $atualizar = mysqli_query($conexao, $sql);
                     <h1 id="titulo"> Tesouro Editado com sucesso </h2>
                 </div>
                 <div>
-                    <a href="listar_tesouros.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>
+                    <a href="listar_tesouros.php" class="btn btn-sm btn-primary float-center" style="color: #ffffff">Voltar</a>
                 </div>
             </div>
         </body>

@@ -37,7 +37,7 @@ $inserir = mysqli_query($conexao, $sql);
                     <h1 id="titulo"> Tesouro Criado com sucesso </h1>
                 </div>
                 <div>
-                    <a href="adicionar_tesouro.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
+                    <a href="adicionar_tesouro.php" class="btn btn-sm btn-primary" style="color: #ffffff">Voltar</a>
                 </div>
             </div>
         </body>

@@ -28,7 +28,7 @@ if(session_id() == '' || !isset($_SESSION) || !$_SESSION['nome']) {
           <a href="adicionar_itens.php" style="margin-left:15px; margin-top: 10px;">Adicionar Itens</a>
           <a href="listar_itens.php" style="margin-left:15px; margin-top: 10x;">Listar Itens</a>
           <a href="adicionar_tesouro.php" style="margin-left:15px; margin-top: 10px;">Adicionar Tesouro</a>
-          <a href="listar_tesouros.php" style="margin-left:15px; margin-top: 10px;">Listar Tesouros</a>
+          <a href="listar_tesouros.php" style="margin-left:15px; margin-top: 10px;">Listar Tesouros</a><br><br><br><br><br><br><br>
           <a href="menu.php" class="float-right" style="margin-left:5;">Voltar</a>
           <a href="logout.php" class="float-left" style="margin-left:15px;">Sair</a>
       </div>

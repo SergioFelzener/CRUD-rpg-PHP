@@ -35,7 +35,7 @@ $inserir = mysqli_query($conexao, $sql);
                     <h1 id="titulo"> Categoria Criada com sucesso </h2>
                 </div>
                 <div>
-                    <a href="adicionar_categoria.php" class="btn btn-sm btn-warning float-center" style="color: #ffffff">Voltar</a>
+                    <a href="adicionar_categoria.php" class="btn btn-sm btn-primary float-center" style="color: #ffffff">Voltar</a>
                 </div>
             </div>
         </body>

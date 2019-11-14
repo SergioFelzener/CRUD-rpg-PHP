@@ -45,13 +45,22 @@ $inserir = mysqli_query($conexao, $sql);
 //echo $categoria
 
 ?>
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/style.css">
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/inserir.css">
+        <title>Inserir Personagens</title>
+    </head>
+        <body>
+            <div class="container" stlye="text-align: center;">
+                <div>
+                    <h1 id="titulo" style="font-size:25px;"> Personagem Criado com sucesso </h1>
+                </div>
+                <div>
+                    <a href="adicionar.php" class="btn btn-sm btn-primary float-center" style="color: #ffffff">Voltar</a>
+                </div>
+            </div>
+        </body>
+</html>
 
-<div class="container">
-    <h4>PERSONAGEM CADASTRADO COM SUCESSO</h4>
-    <div style="padding-top: 20px">
-        <a href="adicionar.php" role="button" class="btn btn-sm">Cadastrar novo PERSONAGEM</a>
-        <a href="menu.php" role="button" class="btn btn-sm">Voltar o menu </a>
-    </div>
-</div>

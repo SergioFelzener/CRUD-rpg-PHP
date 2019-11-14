@@ -29,9 +29,9 @@ session_start();
                         <div class="card-header">
 
                             <form id="signup" method="POST" action="cadastrar_novo.php">
-                                <h3>
-                                    <center>Cadastro de Usuário</center>
-                                </h3>
+                                <h1>
+                                    Cadastro de Usuário
+                                </h1>
                                 <?php
                                 if (isset($_SESSION['status_cadastro'])) :
                                     ?>
@@ -91,7 +91,7 @@ session_start();
                                             </small>
                                         </div>
                                         <div class="form-group">
-                                            <a href="index.php" role="button" class="btn btn-sm btn-warning float-left">voltar</a>
+                                            <a href="index.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
                                             <input type="submit" value="Criar Conta" class="inputButton btn btn-sm login_btn float-right" onclick="forcasenha()" />
 
                                         </div>

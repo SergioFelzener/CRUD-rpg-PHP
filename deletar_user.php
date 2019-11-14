@@ -14,6 +14,6 @@ $deletar = mysqli_query($conexao, $sql);
 
 <div class="container">
     <h3> Deletado com sucesso </h3>
-    <a href="listar_usuarios.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
+    <a href="listar_usuarios.php" class="btn btn-sm btn-primary" style="color: #ffffff">Voltar</a>
 
 </div>

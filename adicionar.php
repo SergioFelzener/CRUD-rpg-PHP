@@ -144,7 +144,7 @@
                     <div class="form-group">
                         <label for="img">Imagem</label>
                         <div>
-                            <input type="file"  class="form-control-file" name="img" id="upload" placeholder="Imagem" autocomplete="off" required>
+                            <input type="file"  class="form-control-file" name="img" id="upload" placeholder="Imagem" autocomplete="off" required><br>
                             <img id="imagem" style="width: 150px">
                         </div>
                     </div>          

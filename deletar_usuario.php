@@ -13,7 +13,7 @@ $deletar = mysqli_query($conexao, $sql);
 <link rel="stylesheet" href="css/style.css">
 
 <div class="container">
-    <h3> Deletado com sucesso </h3>
-    <a href="aprovar_usuario.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
+    <h1> Deletado com sucesso </h1>
+    <a href="aprovar_usuario.php" class="btn btn-sm btn-primary" style="color: #ffffff">Voltar</a>
 
 </div>

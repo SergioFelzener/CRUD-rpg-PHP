@@ -14,6 +14,6 @@ $deletar = mysqli_query($conexao, $sql);
 
 <div class="container">
     <h1 id="titulo">Tesouro apagado com sucesso</h1>
-    <a href="listar_tesouros.php" class="btn btn-sm btn-warning" style="color: #ffffff">Voltar</a>
+    <a href="listar_tesouros.php" class="btn btn-sm btn-primary" style="color: #ffffff">Voltar</a>
 
 </div>

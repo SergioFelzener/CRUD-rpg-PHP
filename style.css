@@ -1,12 +1,12 @@
-
-
-html,body{
-background-image:url(img/fundo_login.jpg);
-background-size: cover;
-background-repeat: repeat;
-height: 100%;
-font-family: 'Numans', sans-serif;
+html,
+body {
+    background-image: url(img/fundo_login.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
 }
+
 .fixarfooter {
     bottom: 0;
     position: fixed;
@@ -14,32 +14,33 @@ font-family: 'Numans', sans-serif;
     text-align: center;
 }
 
-.container{
+.container {
     max-width: 360px;
-height: 100%;
-align-content: center;
+    height: 100%;
+    align-content: center;
 }
 
-.card{
-height: 420px;
-margin-top: 25%;
-margin-bottom: auto;
-width: 360px;
-background-color: rgba(0,0,0,0.5) !important;
-display: block;
+.card {
+    height: 420px;
+    margin-top: 25%;
+    margin-bottom: auto;
+    width: 360px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    display: block;
 
 }
-#cadastro{
+
+#cadastro {
     height: 660px;
     margin-top: 5%;
     margin-bottom: auto;
     width: 360px;
-    background-color: rgba(0,0,0,0.5) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
     display: block;
-    
-    }
 
-.social_icon span{
+}
+
+/* .social_icon span{
 font-size: 50px; 
 margin-left: 10px;
 color:#3283a8;
@@ -58,88 +59,97 @@ color: white;
 position: absolute;
 right: 20px;
 top: -45px;
+} */
+
+.input-group-prepend span {
+    width: 50px;
+    background-color:#5e21a4;
+    color: white;
+    border: 0 !important;
 }
 
-.input-group-prepend span{
-width: 50px;
-background-color:#3283a8;
-color: white;
-border:0 !important;
-}
-
-input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
 
 }
 
-.remember{
-color: white;
+.remember {
+    color: white;
 }
 
-.remember input
-{
-width: 20px;
-height: 20px;
-margin-left: 15px;
-margin-right: 5px;
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
 }
 
-.login_btn{
-color: white;
-background-color: #3283a8;
-width: 100px;
+.login_btn {
+    color: white;
+    background-color: #5e21a4;
+    width: 100px;
 }
 
-.login_btn:hover{
-color: black;
-background-color:white;
+.login_btn:hover {
+    color: black;
+    background-color: white;
 }
 
-.links{
-color: white;
+.links {
+    color: white;
 }
 
-.links a{
-margin-left: 4px;
+.links a {
+    margin-left: 4px;
 }
 
 #msg {
-    color:white;
+    color: white;
     text-align: center;
     background-color: red;
-    -webkit-box-shadow: 11px 10px 21px 5px #ffffff; 
+    -webkit-box-shadow: 11px 10px 21px 5px #ffffff;
     box-shadow: 9px 8px 16px 5px #ffffff;
     border-radius: 5px 5px 5px 5px;
 
 }
+
 #texto {
     text-align: center;
     color: #ffffff;
-    
+
 }
 
 #impSenha {
     text-align: center;
     color: #ffffff;
 }
+
 .notificacao {
     color: rgba(255, 247, 12, 0.82);
     font-size: 6px;
     text-align: center;
-    background-color:#04368e;
+    background-color: #04368e;
     border: 4px double rgba(255, 247, 12, 0.82);
     border-radius: 5px 5px 5px 5px;
-    -webkit-box-shadow: 11px 10px 21px 5px #ffffff; 
+    -webkit-box-shadow: 11px 10px 21px 5px #ffffff;
     box-shadow: 9px 8px 16px 5px #ffffff;
-    
+
 }
+
 a {
     color: yellow;
 }
+
 a:hover {
     color: rgb(0, 187, 255);
 }
-.progress{
+
+.progress {
     height: 0.4rem;
+}
+h1{
+    color: white;
+    font-size:  30px; 
+    text-align: center;
 }
