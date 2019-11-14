@@ -47,7 +47,6 @@
                 <tr>
                   <th scope="col">#id_tesouro</th>
                   <th scope="col">Nome Tesouro</th>
-                  <th scope="col">Imagem</th>
                   <th scope="col">Ação</th>
                 </tr>
               </thead>
@@ -68,11 +67,10 @@
                 <tr>
                   <td><?php echo $id_tesouro ?></td>
                   <td><?php echo $nome_tesouro ?></td>
-                  <td><?php echo "teste" ?></td>
 
                   <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_tesouro.php?id=<?php echo $id_tesouro ?>" role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
-
-                    <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_tesouro.php?id=<?php echo $id_tesouro ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a></td>
+                    <?php if ($_SESSION['nivel'] == 1) { ?>
+                      <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_tesouro.php?id=<?php echo $id_tesouro ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a><?php } ?></td>
                 </tr>
 
               <?php

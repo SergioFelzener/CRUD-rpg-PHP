@@ -131,15 +131,15 @@
                     </div>
                     <div class="form-group">
                         <label for="power">Power</label>
-                        <input type="number" class="form-control" name="power" placeholder="Força do personagem" autocomplete="off" required>
+                        <input type="number" class="form-control" name="power" placeholder="Força do personagem" autocomplete="off" min="1" max="999" required>
                     </div>
                     <div class="form-group">
                         <label for="destreza">Destreza</label>
-                        <input type="number" class="form-control" name="destreza" placeholder="Nível de destreza" autocomplete="off" required>
+                        <input type="number" class="form-control" name="destreza" placeholder="Nível de destreza" autocomplete="off" min="1" max="999" required>
                     </div>
                     <div class="form-group">
                         <label for="inteli">Inteligência</label>
-                        <input type="number" class="form-control" name="inteli" placeholder="Nível de inteligência" autocomplete="off" required>
+                        <input type="number" class="form-control" name="inteli" placeholder="Nível de inteligência" autocomplete="off" min="1" max="999" required>
                     </div>
                     <div class="form-group">
                         <label for="img">Imagem</label>

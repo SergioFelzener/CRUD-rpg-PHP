@@ -7,7 +7,7 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>login page</title>
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -49,10 +49,11 @@ session_start();
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
                                         <input type="password" name="senha" class="form-control" placeholder="password" required="required">
-                                    </div>
+                                    </div>\
+                                    <!--
                                     <div class="row align-items-center remember">
                                         <input type="checkbox">Lembrar
-                                    </div><br>
+                                    </div><br>-->
                                     <div class="form-group">
                                         <input type="submit" value="Login" class="btn float-right login_btn">
                                     </div>
@@ -62,13 +63,16 @@ session_start();
                                 <div class="d-flex justify-content-center links">
                                     Não tem uma conta?<a href="cadastro_novo.php" style="font-size:14px;">Cadastro Novo</a>
                                 </div>
+                                <!--
                                 <div class="d-flex justify-content-center">
                                     <a href="#">Esqueceu sua senha?</a>
                                 </div>
+                                -->
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </header>
     </main>
     <footer class="fixarfooter">

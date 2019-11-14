@@ -10,11 +10,12 @@
   <script src="https://kit.fontawesome.com/04d8502c9f.js"></script>
   <link rel="stylesheet" type="text/css" href="css/sidenav.css">
   <script src="js/sidenav.js"></script>
+  <script src="js/confirm_delete.js"></script>
   <title>Listar Usuários</title>
 </head>
 <style>
   body {
-    background-image: url(img/fmgreen.png);
+    background-image: url(img/fmred2.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -82,7 +83,7 @@
               <?php
               if ($_SESSION['nivel'] == 1) { ?>
                 <td>
-                  <a class="btn btn-danger btn-sm" style="color:#ffffff" href="deletar_user.php?id=<?php echo $id_usuario ?>" role="button"><i class="fas fa-hand-middle-finger"></i>&nbsp; Apagar</a></td>
+                  <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_user.php?id=<?php echo $id_usuario ?>" role="button"><i class="fas fa-hand-middle-finger"></i>&nbsp; Apagar</a></td>
               <?php } ?>
             </tr>
 

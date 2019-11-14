@@ -69,8 +69,8 @@
               <td><?php echo $nomecategoria ?></td>
 
               <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
-
-                <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a></td>
+              <?php if ($_SESSION['nivel'] == 1) { ?>
+              <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a><?php } ?></td>
             </tr>
 
           <?php

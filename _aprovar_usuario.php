@@ -2,6 +2,7 @@
 
 include 'conexao.php';
 
+
 $id = $_GET['id'];
 $nivel = $_GET['nivel'];
 

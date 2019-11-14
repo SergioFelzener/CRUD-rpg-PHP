@@ -43,3 +43,9 @@ body{
                  0 14px 0 #141414, 0 15px 0 #121212, 
                  0 22px 30px rgba(0,0,0,0.9);
 } 
+.fixarfooter {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
