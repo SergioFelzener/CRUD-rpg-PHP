@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adicionar_categoria.css">
     <script type="texte/javascript" src="js/bootstrap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/preview_img.js"></script>
     <link rel="stylesheet" type="text/css" href="css/sidenav.css">
     <script src="js/sidenav.js"></script>
@@ -81,31 +81,59 @@
             margin-right: auto;
         }
     </style>
+    <script>
+        function submitData() {
+            $form = $('#frmCategoria');
+
+            $.ajax({
+                    method: "POST",
+                    url: "_inserir_categoria.php",
+                    data: $form.serialize(),
+                })
+                .done(function(data) {
+                    //console.log(data);
+                    let json = JSON.parse(data);
+                    if (json.categoria) {
+                        alert("Categoria cadastrada com Sucesso");
+                        //$erro = $('.erro');
+                        //$erro.css("display","none");
+                        //alert("Usuário logado com sucesso ... Bem vindo, " + json.nome);
+                        $(location).attr('href', 'listar_categoria.php');
+                    } else {
+                        alert("Erro: " + json.error);
+                        // $erro = $('.erro');
+                        // $msg = $('#msg');
+                        //$msg.html("Erro: " + json.error);
+                        // $erro.css("display","block");
+                    }
+                });
+            return false;
+        }
+    </script>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <?php include("painel.php"); ?>
+        </nav>
+    </header>
     <main>
-        <header>
-            <nav>
-                <?php include("painel.php"); ?>
-            </nav>
-            <h1 id="titulo"> Cadastro de Categoria</h1>
-            <div class="container">
-                <div class="row col-lg-12">
-                    <form class="form-style" action="_inserir_categoria.php" method="POST">
-                        <label for="categoria">Categoria</label>
-                        <div class="form-group">
-                            <input type="text" name="categoria" class="form-control" placeholder="Digite o nome da Categoria" autocomplete="off" required="required">
-                        </div><br>
-                        <div style="text-align: right">
-                            <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
-                            <button type="submit" id="botao" class="btn btn-sm">cadastrar</button>
-                        </div>
-
-                    </form>
-                </div>
+        <h1 id="titulo"> Cadastro de Categoria</h1>
+        <div class="container">
+            <div class="row col-lg-12">
+                <form id="frmCategoria" class="form-style" action="_inserir_categoria.php" method="POST" onSubmit="return submitData();">
+                    <label for="categoria">Categoria</label>
+                    <div class="form-group">
+                        <input type="text" name="categoria" class="form-control" placeholder="Digite o nome da Categoria" autocomplete="off">
+                    </div><br>
+                    <div style="text-align: right">
+                        <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
+                        <button type="submit" id="botao" class="btn btn-sm">cadastrar</button>
+                    </div>
+                </form>
             </div>
-        </header>
+        </div>
     </main>
     <footer class="fixarfooter">
         <?php include 'footer.php'; ?>

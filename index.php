@@ -15,7 +15,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script>
-    var x = "";
+        //fazendo requisicao AJAX:
     function submitData(){
         $form = $('#frmLogin');
 
