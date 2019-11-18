@@ -16,31 +16,31 @@ session_start();
     <script src="js/jquery-3.4.1.min.js"></script>
     <script>
         //fazendo requisicao AJAX:
-    function submitData(){
-        $form = $('#frmLogin');
+        function submitData() {
+            $form = $('#frmLogin');
 
-        $.ajax({
-            method: "POST",
-            url: "login.php",
-            data: $form.serialize(),
-        })
-        .done(function(msg){
-            //console.log(msg);
-            let json = JSON.parse(msg);
-            if(json.login){
-                $erro = $('.erro');
-                $erro.css("display","none");
-                //alert("Usuário logado com sucesso ... Bem vindo, " + json.nome);
-                $(location).attr('href', 'menu.php');
-            }else{
-                $erro = $('.erro');
-                $msg = $('#msg');
-                $msg.html("Erro: " + json.error);
-                $erro.css("display","block");
-            }
-        });
-        return false;
-    }
+            $.ajax({
+                    method: "POST",
+                    url: "login.php",
+                    data: $form.serialize(),
+                })
+                .done(function(msg) {
+                    //console.log(msg);
+                    let json = JSON.parse(msg);
+                    if (json.login) {
+                        $erro = $('.erro');
+                        $erro.css("display", "none");
+                        //alert("Usuário logado com sucesso ... Bem vindo, " + json.nome);
+                        $(location).attr('href', 'menu.php');
+                    } else {
+                        $erro = $('.erro');
+                        $msg = $('#msg');
+                        $msg.html("Erro: " + json.error);
+                        $erro.css("display", "block");
+                    }
+                });
+            return false;
+        }
     </script>
 </head>
 
@@ -52,9 +52,9 @@ session_start();
                     <div class="card">
                         <div class="card-header">
                             <h1>Login</h1>
-                                <div class="erro" style="display:none;">
-                                    <p id="msg"></p>
-                                </div>
+                            <div class="erro" style="display:none;">
+                                <p id="msg"></p>
+                            </div>
                             <div class="card-body">
                                 <!--Apontando para a pagina login PHP para fazer a validacoes de usuario e senha ACTION metodo POST -->
                                 <form id="frmLogin" method="post" action="login.php" onsubmit="return submitData()">
