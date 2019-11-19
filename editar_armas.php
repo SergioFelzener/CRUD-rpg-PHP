@@ -22,45 +22,44 @@ $id = $_GET['id'];
 </head>
 
 <body>
+    <header>
+        <nav>
+            <?php include 'painel.php'; ?>
+        </nav>
+        <h1 id="titulo"> Editar Arma</h1>
+    </header>
     <main>
-        <header>
-            <nav>
-                <?php include 'painel.php'; ?>
-            </nav>
+        <div class="container">
+            <div class="row col-lg-12">
+                <form class="form-style" action="atualizar_armas.php" method="POST">
+                    <?php
 
-            <h1 id="titulo"> Editar Arma</h1>
-            <div class="container">
-                <div class="row col-lg-12">
-                    <form class="form-style" action="atualizar_armas.php" method="POST">
-                        <?php
-
-                        $sql = "SELECT * FROM `armas` WHERE id_armas = $id";
-                        $buscar = mysqli_query($conexao, $sql);
-                        while ($array = mysqli_fetch_array($buscar)) {
-                            $id_armas = $array['id_armas'];
-                            $nome_arma = $array['nome_arma'];
+                    $sql = "SELECT * FROM `armas` WHERE id_armas = $id";
+                    $buscar = mysqli_query($conexao, $sql);
+                    while ($array = mysqli_fetch_array($buscar)) {
+                        $id_armas = $array['id_armas'];
+                        $nome_arma = $array['nome_arma'];
 
 
-                            ?>
+                        ?>
 
 
-                            <div class="form-group">
-                                <label for="id">Id Arma</label>
-                                <input type="text" class="form-control" name="id" style="color: green;" value="<?php echo $id_armas ?>" readonly>
-                                <label for="nome_arma">Nome da Arma</label>
-                                <input type="text" class="form-control" name="nome_arma" value="<?php echo $nome_arma ?>">
+                        <div class="form-group">
+                            <label for="id">Id Arma</label>
+                            <input type="text" class="form-control" name="id" style="color: green;" value="<?php echo $id_armas ?>" readonly>
+                            <label for="nome_arma">Nome da Arma</label>
+                            <input type="text" class="form-control" name="nome_arma" value="<?php echo $nome_arma ?>">
+                        </div>
+                        <div class="form-group">
+
+                            <div id="btnCadastro">
+                                <a href="listar_armas.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
+                                <button type="submit" id="botao" class="btn btn-sm">atualizar</button>
                             </div>
-                            <div class="form-group">
-
-                                <div id="btnCadastro">
-                                    <a href="listar_armas.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
-                                    <button type="submit" id="botao" class="btn btn-sm">atualizar</button>
-                                </div>
-                            <?php  } ?>
-                    </form>
-                </div>
+                        <?php  } ?>
+                </form>
             </div>
-        </header>
+        </div>
     </main>
     <footer class="fixarfooter">
         <?php include 'footer.php'; ?>

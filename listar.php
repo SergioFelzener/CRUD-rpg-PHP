@@ -33,81 +33,81 @@
 </head>
 
 <body>
-  <main>
+  <header>
     <nav>
       <?php include 'painel.php'; ?>
     </nav>
-    <header>
-      <div class="container">
-        <h1>Lista de Personagens</h1>
-        <table class="table table-sm table-dark">
-          <thead>
+  </header>
+  <main>
+    <div class="container">
+      <h1>Lista de Personagens</h1>
+      <table class="table table-sm table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#ID</th>
+            <th scope="col">NOME</th>
+            <th scope="col">CATEGORIA</th>
+            <th scope="col">ARMA</th>
+            <th scope="col">ITEM</th>
+            <th scope="col">TESOURO</th>
+            <th scope="col">FORÇA</th>
+            <th scope="col">DESTREZA</th>
+            <th scope="col">INTELIGÊNCIA</th>
+            <th scope="col">IMAGEM</th>
+            <th scope="col">Editar</th>
+            <?php
+            if ($_SESSION['nivel'] == 1) {
+              ?>
+              <th scope="col">Deletar</th>
+            <?php } ?>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+
+          include 'conexao.php';
+          $sql = "SELECT * FROM `personagens`";
+          $busca = mysqli_query($conexao, $sql);
+
+          while ($array = mysqli_fetch_array($busca)) {
+            $id_personagens = $array['id_personagens'];
+            $nome = $array['nome'];
+            $categoria = $array['categoria'];
+            $armas = $array['armas'];
+            $itens = $array['itens'];
+            $tesouros = $array['tesouros'];
+            $power = $array['power'];
+            $destreza = $array['destreza'];
+            $inteli = $array['inteli'];
+            $img = $array['img'];
+            ?>
             <tr>
-              <th scope="col">#ID</th>
-              <th scope="col">NOME</th>
-              <th scope="col">CATEGORIA</th>
-              <th scope="col">ARMA</th>
-              <th scope="col">ITEM</th>
-              <th scope="col">TESOURO</th>
-              <th scope="col">FORÇA</th>
-              <th scope="col">DESTREZA</th>
-              <th scope="col">INTELIGÊNCIA</th>
-              <th scope="col">IMAGEM</th>
-              <th scope="col">Editar</th>
-              <?php
-              if ($_SESSION['nivel'] == 1) {
-                ?>
-                <th scope="col">Deletar</th>
+              <td><?= $id_personagens ?></td>
+              <td><?= $nome ?></td>
+              <td><?= $categoria ?></td>
+              <td><?= $armas ?></td>
+              <td><?= $itens ?></td>
+              <td><?= $tesouros ?></td>
+              <td><?= $power ?></td>
+              <td><?= $destreza ?></td>
+              <td><?= $inteli ?></td>
+              <td><img style='height: 70px;' src=uploads/<?= $img ?>> </td> <td>
+                <a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar.php?id=<?= $id_personagens ?>" role="button"><i class="fas fa-pencil-alt"></i> </a>
+              </td>
+              <?php if ($_SESSION['nivel'] == 1) { ?>
+                <td>
+                  <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar.php?id=<?php echo $id_personagens ?>" role="button"><i class="fas fa-trash-alt"></i> </a>
+                </td>
               <?php } ?>
             </tr>
-          </thead>
-          <tbody>
-            <?php
-
-            include 'conexao.php';
-            $sql = "SELECT * FROM `personagens`";
-            $busca = mysqli_query($conexao, $sql);
-
-            while ($array = mysqli_fetch_array($busca)) {
-              $id_personagens = $array['id_personagens'];
-              $nome = $array['nome'];
-              $categoria = $array['categoria'];
-              $armas = $array['armas'];
-              $itens = $array['itens'];
-              $tesouros = $array['tesouros'];
-              $power = $array['power'];
-              $destreza = $array['destreza'];
-              $inteli = $array['inteli'];
-              $img = $array['img'];
-              ?>
-              <tr>
-                <td><?= $id_personagens ?></td>
-                <td><?= $nome ?></td>
-                <td><?= $categoria ?></td>
-                <td><?= $armas ?></td>
-                <td><?= $itens ?></td>
-                <td><?= $tesouros ?></td>
-                <td><?= $power ?></td>
-                <td><?= $destreza ?></td>
-                <td><?= $inteli ?></td>
-                <td><img style='height: 70px;' src=uploads/<?= $img ?>> </td> <td>
-                  <a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar.php?id=<?= $id_personagens ?>" role="button"><i class="fas fa-pencil-alt"></i> </a>
-                </td>
-                <?php if ($_SESSION['nivel'] == 1) { ?>
-                  <td>
-                    <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar.php?id=<?php echo $id_personagens ?>" role="button"><i class="fas fa-trash-alt"></i> </a>
-                  </td>
-                <?php } ?>
-              </tr>
-            <?php
+          <?php
             //abrindo novamente a tag php e fechando a {} do while apos o td pois o laco vai adicionar elementos ao TD.
           } ?>
-          </tbody>
-        </table>
-        <div>
-          <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
-        </div>
-    </header>
+        </tbody>
+      </table>
+      <div>
+        <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
+      </div>
   </main>
   <footer class="fixarfooter">
     <?php include 'footer.php'; ?>

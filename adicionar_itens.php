@@ -44,13 +44,14 @@
         }
     </script>
 </head>
+
 <body>
     <header>
         <nav>
             <?php include("painel.php"); ?>
         </nav>
+        <h1 id="titulo"> Cadastro de Itens</h1>
     </header>
-    <h1 id="titulo"> Cadastro de Itens</h1>
     <main>
         <div class="container">
             <div class="row col-lg-12">
@@ -74,4 +75,3 @@
 </body>
 
 </html>
-

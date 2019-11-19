@@ -34,59 +34,58 @@
 </style>
 
 <body>
+  <header>
+    <nav>
+      <?php include("painel.php"); ?>
+    </nav>
+    <h1 id="titulo">Lista de Itens</h1>
+  </header>
   <main>
-    <header>
-      <nav>
-        <?php include("painel.php"); ?>
-      </nav>
-      <div class="container">
-
-        <h1 id="titulo">Lista de Itens</h1>
-        <table class="table table-dark table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#id_itens</th>
-              <th scope="col">Nome Item</th>
-              <th scope="col">Ação</th>
-            </tr>
-          </thead>
+    <div class="container">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#id_itens</th>
+            <th scope="col">Nome Item</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
 
 
-          <?php
+        <?php
 
-          include 'conexao.php';
-          $sql = "SELECT * FROM `itens`";
-          $busca = mysqli_query($conexao, $sql);
+        include 'conexao.php';
+        $sql = "SELECT * FROM `itens`";
+        $busca = mysqli_query($conexao, $sql);
 
-          while ($array = mysqli_fetch_array($busca)) {
-            $id_itens = $array['id_itens'];
-            $nome_itens = $array['nome_itens'];
+        while ($array = mysqli_fetch_array($busca)) {
+          $id_itens = $array['id_itens'];
+          $nome_itens = $array['nome_itens'];
 
 
-            ?>
-            <tr>
-              <td><?php echo $id_itens ?></td>
-              <td><?php echo $nome_itens ?></td>
+          ?>
+          <tr>
+            <td><?php echo $id_itens ?></td>
+            <td><?php echo $nome_itens ?></td>
 
-              <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_itens.php?id=<?php echo $id_itens ?>" role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
+            <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_itens.php?id=<?php echo $id_itens ?>" role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
               <?php if ($_SESSION['nivel'] == 1) { ?>
-              <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_itens.php?id=<?php echo $id_itens ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a><?php } ?></td>
-            </tr>
+                <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_itens.php?id=<?php echo $id_itens ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a><?php } ?></td>
+          </tr>
 
-          <?php
+        <?php
           //abrindo novamente a tag php e fechando a {} do wilhe apos o td pois o laco vai adicionar elementos ao TD.
 
         } ?>
 
 
 
-          </tr>
+        </tr>
 
-        </table>
-        <div>
-          <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
-        </div>
-    </header>
+      </table>
+      <div>
+        <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
+      </div>
   </main>
   <footer class="fixarfooter">
     <?php include 'footer.php'; ?>

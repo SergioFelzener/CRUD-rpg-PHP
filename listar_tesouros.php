@@ -34,59 +34,58 @@
 </style>
 
 <body>
-  <main>
-    <header>
+  <header>
+    <nav>
+      <?php include("painel.php"); ?>
       <nav>
-        <?php include("painel.php"); ?>
-        <nav>
-          <div class="container">
-
-            <h1 id="titulo">Lista de Tesouros</h1>
-            <table class="table table-dark table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">#id_tesouro</th>
-                  <th scope="col">Nome Tesouro</th>
-                  <th scope="col">Ação</th>
-                </tr>
-              </thead>
-
-
-              <?php
-
-              include 'conexao.php';
-              $sql = "SELECT * FROM `tesouro`";
-              $busca = mysqli_query($conexao, $sql);
-
-              while ($array = mysqli_fetch_array($busca)) {
-                $id_tesouro = $array['id_tesouro'];
-                $nome_tesouro = $array['nome_tesouro'];
+        <h1 id="titulo">Lista de Tesouros</h1>
+  </header>
+  <main>
+    <div class="container">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#id_tesouro</th>
+            <th scope="col">Nome Tesouro</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
 
 
-                ?>
-                <tr>
-                  <td><?php echo $id_tesouro ?></td>
-                  <td><?php echo $nome_tesouro ?></td>
+        <?php
 
-                  <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_tesouro.php?id=<?php echo $id_tesouro ?>" role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
-                    <?php if ($_SESSION['nivel'] == 1) { ?>
-                      <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_tesouro.php?id=<?php echo $id_tesouro ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a><?php } ?></td>
-                </tr>
+        include 'conexao.php';
+        $sql = "SELECT * FROM `tesouro`";
+        $busca = mysqli_query($conexao, $sql);
 
-              <?php
-              //abrindo novamente a tag php e fechando a {} do wilhe apos o td pois o laco vai adicionar elementos ao TD.
-
-            } ?>
+        while ($array = mysqli_fetch_array($busca)) {
+          $id_tesouro = $array['id_tesouro'];
+          $nome_tesouro = $array['nome_tesouro'];
 
 
+          ?>
+          <tr>
+            <td><?php echo $id_tesouro ?></td>
+            <td><?php echo $nome_tesouro ?></td>
 
-              </tr>
+            <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_tesouro.php?id=<?php echo $id_tesouro ?>" role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
+              <?php if ($_SESSION['nivel'] == 1) { ?>
+                <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_tesouro.php?id=<?php echo $id_tesouro ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a><?php } ?></td>
+          </tr>
 
-            </table>
-            <div>
-              <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
-            </div>
-    </header>
+        <?php
+          //abrindo novamente a tag php e fechando a {} do wilhe apos o td pois o laco vai adicionar elementos ao TD.
+
+        } ?>
+
+
+
+        </tr>
+
+      </table>
+      <div>
+        <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
+      </div>
   </main>
   <footer class="fixarfooter">
     <?php include 'footer.php'; ?>

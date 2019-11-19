@@ -57,20 +57,20 @@ $inserir = mysqli_query($conexao, $sql);
 </head>
 
 <body>
+    <header>
+        <nav>
+            <?php include 'painel.php'; ?>
+        </nav>
+    </header>
     <main>
-        <header>
-            <nav>
-                <?php include 'painel.php'; ?>
-            </nav>
-            <div class="container" stlye="text-align: center;">
-                <div>
-                    <h1 id="titulo"> Personagem Criado com sucesso </h1>
-                </div>
-                <div>
-                    <a href="adicionar.php" class="btn btn-sm btn-primary float-center" style="color: #ffffff">Voltar</a>
-                </div>
+        <div class="container" stlye="text-align: center;">
+            <div>
+                <h1 id="titulo"> Personagem Criado com sucesso </h1>
             </div>
-        </header>
+            <div>
+                <a href="adicionar.php" class="btn btn-sm btn-primary float-center" style="color: #ffffff">Voltar</a>
+            </div>
+        </div>
     </main>
     <footer class="fixarfooter">
         <?php include 'footer.php'; ?>

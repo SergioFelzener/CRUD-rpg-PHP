@@ -82,44 +82,44 @@ $id = $_GET['id'];
 </head>
 
 <body>
+    <header>
+        <nav>
+            <?php include 'painel.php'; ?>
+        </nav>
+        <h1 id="titulo"> Editar Categoria</h1>
+    </header>
     <main>
-        <header>
-            <nav>
-                <?php include 'painel.php'; ?>
-            </nav>
-            <h1 id="titulo"> Editar Categoria</h1>
-            <div class="container">
-                <div class="row col-lg-12">
-                    <form class="form-style" action="atualizar_categoria.php" method="POST">
-                        <?php
+        <div class="container">
+            <div class="row col-lg-12">
+                <form class="form-style" action="atualizar_categoria.php" method="POST">
+                    <?php
 
-                        $sql = "SELECT * FROM `categoria` WHERE id_categoria = $id";
-                        $buscar = mysqli_query($conexao, $sql);
-                        while ($array = mysqli_fetch_array($buscar)) {
-                            $id_categoria = $array['id_categoria'];
-                            $nomecategoria = $array['nome_categoria'];
+                    $sql = "SELECT * FROM `categoria` WHERE id_categoria = $id";
+                    $buscar = mysqli_query($conexao, $sql);
+                    while ($array = mysqli_fetch_array($buscar)) {
+                        $id_categoria = $array['id_categoria'];
+                        $nomecategoria = $array['nome_categoria'];
 
 
-                            ?>
+                        ?>
 
 
-                            <div class="form-group">
-                                <label>Id Categoria</label>
-                                <input type="text" class="form-control" name="id" value="<?php echo $id_categoria ?>"style="color:green;" readonly>
-                                <label>Nome Categoria</label>
-                                <input type="text" class="form-control" name="nomecategoria" value="<?php echo $nomecategoria ?>">
+                        <div class="form-group">
+                            <label>Id Categoria</label>
+                            <input type="text" class="form-control" name="id" value="<?php echo $id_categoria ?>" style="color:green;" readonly>
+                            <label>Nome Categoria</label>
+                            <input type="text" class="form-control" name="nomecategoria" value="<?php echo $nomecategoria ?>">
+                        </div>
+                        <div class="form-group">
+
+                            <div id="btnCadastro">
+                                <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
+                                <button type="submit" id="botao" class="btn btn-sm">atualizar</button>
                             </div>
-                            <div class="form-group">
-
-                                <div id="btnCadastro">
-                                    <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
-                                    <button type="submit" id="botao" class="btn btn-sm">atualizar</button>
-                                </div>
-                            <?php  } ?>
-                    </form>
-                </div>
+                        <?php  } ?>
+                </form>
             </div>
-        </header>
+        </div>
     </main>
     <footer class="fixarfooter">
         <?php include 'footer.php'; ?>

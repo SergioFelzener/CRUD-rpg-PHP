@@ -45,57 +45,55 @@ session_start();
 </head>
 
 <body>
-    <main>
-        <header>
-            <div class="container">
-                <div class="d-flex justify-content-center h-100">
-                    <div class="card">
-                        <div class="card-header">
-                            <h1>Login</h1>
-                            <div class="erro" style="display:none;">
-                                <p id="msg"></p>
-                            </div>
-                            <div class="card-body">
-                                <!--Apontando para a pagina login PHP para fazer a validacoes de usuario e senha ACTION metodo POST -->
-                                <form id="frmLogin" method="post" action="login.php" onsubmit="return submitData()">
-                                    <div class="input-group form-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                        </div>
-                                        <input type="text" name="usuario" class="form-control" placeholder="username" required="required">
+    <header>
+        <div class="container">
+            <div class="d-flex justify-content-center h-100">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Login</h1>
+                        <div class="erro" style="display:none;">
+                            <p id="msg"></p>
+                        </div>
+                        <div class="card-body">
+                            <!--Apontando para a pagina login PHP para fazer a validacoes de usuario e senha ACTION metodo POST -->
+                            <form id="frmLogin" method="post" action="login.php" onsubmit="return submitData()">
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     </div>
-                                    <div class="input-group form-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                        </div>
-                                        <input type="password" name="senha" class="form-control" placeholder="password" required="required">
-                                    </div>\
-                                    <!--
+                                    <input type="text" name="usuario" class="form-control" placeholder="username" required="required">
+                                </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input type="password" name="senha" class="form-control" placeholder="password" required="required">
+                                </div>\
+                                <!--
                                     <div class="row align-items-center remember">
                                         <input type="checkbox">Lembrar
                                     </div><br>-->
-                                    <div class="form-group">
-                                        <input type="submit" value="Login" class="btn float-right login_btn">
-                                        <!--<a href="#" onclick="submitData()">Submete</a>-->
-                                    </div>
-                                </form>
-                            </div><br>
-                            <div class="card-footer">
-                                <div class="d-flex justify-content-center links">
-                                    Não tem uma conta?<a href="cadastro_novo.php" style="font-size:14px;">Cadastro Novo</a>
+                                <div class="form-group">
+                                    <input type="submit" value="Login" class="btn float-right login_btn">
+                                    <!--<a href="#" onclick="submitData()">Submete</a>-->
                                 </div>
-                                <!--
+                            </form>
+                        </div><br>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center links">
+                                Não tem uma conta?<a href="cadastro_novo.php" style="font-size:14px;">Cadastro Novo</a>
+                            </div>
+                            <!--
                                 <div class="d-flex justify-content-center">
                                     <a href="#">Esqueceu sua senha?</a>
                                 </div>
                                 -->
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-    </main>
+        </div>
+    </header>
     <footer class="fixarfooter">
         <?php include 'footer.php'; ?>
     </footer>

@@ -22,44 +22,44 @@ $id = $_GET['id'];
 </head>
 
 <body>
+    <header>
+        <nav>
+            <?php include 'painel.php'; ?>
+        </nav>
+        <h1 id="titulo"> Editar Itens</h1>
+    </header>
     <main>
-        <header>
-            <nav>
-                <?php include 'painel.php'; ?>
-            </nav>
-            <h1 id="titulo"> Editar Itens</h1>
-            <div class="container">
-                <div class="row col-lg-12">
-                    <form class="form-style" action="atualizar_itens.php" method="POST">
-                        <?php
+        <div class="container">
+            <div class="row col-lg-12">
+                <form class="form-style" action="atualizar_itens.php" method="POST">
+                    <?php
 
-                        $sql = "SELECT * FROM `itens` WHERE id_itens = $id";
-                        $buscar = mysqli_query($conexao, $sql);
-                        while ($array = mysqli_fetch_array($buscar)) {
-                            $id_itens = $array['id_itens'];
-                            $nome_itens = $array['nome_itens'];
+                    $sql = "SELECT * FROM `itens` WHERE id_itens = $id";
+                    $buscar = mysqli_query($conexao, $sql);
+                    while ($array = mysqli_fetch_array($buscar)) {
+                        $id_itens = $array['id_itens'];
+                        $nome_itens = $array['nome_itens'];
 
 
-                            ?>
+                        ?>
 
 
-                            <div class="form-group">
-                                <label>Id Item</label>
-                                <input type="text" class="form-control" name="id" value="<?php echo $id_itens ?>" style="color:green;" readonly>
-                                <label>Nome do Item</label>
-                                <input type="text" class="form-control" name="nome_itens" value="<?php echo $nome_itens ?>">
+                        <div class="form-group">
+                            <label>Id Item</label>
+                            <input type="text" class="form-control" name="id" value="<?php echo $id_itens ?>" style="color:green;" readonly>
+                            <label>Nome do Item</label>
+                            <input type="text" class="form-control" name="nome_itens" value="<?php echo $nome_itens ?>">
+                        </div>
+                        <div class="form-group">
+
+                            <div id="btnCadastro">
+                                <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
+                                <button type="submit" id="botao" class="btn btn-sm">atualizar</button>
                             </div>
-                            <div class="form-group">
-
-                                <div id="btnCadastro">
-                                    <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
-                                    <button type="submit" id="botao" class="btn btn-sm">atualizar</button>
-                                </div>
-                            <?php  } ?>
-                    </form>
-                </div>
+                        <?php  } ?>
+                </form>
             </div>
-        </header>
+        </div>
     </main>
     <footer class="fixarfooter">
         <?php include 'footer.php'; ?>

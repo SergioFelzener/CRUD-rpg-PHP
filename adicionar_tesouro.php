@@ -51,8 +51,8 @@
         <nav>
             <?php include("painel.php"); ?>
         </nav>
+        <h1 id="titulo"> Cadastro de Tesouro</h1>
     </header>
-    <h1 id="titulo"> Cadastro de Tesouro</h1>
     <main>
         <div class="container">
             <div class="row col-lg-12">

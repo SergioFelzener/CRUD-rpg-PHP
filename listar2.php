@@ -16,6 +16,31 @@
   <link rel="stylesheet" type="text/css" href="css/sidenav.css">
   <script src="js/sidenav.js"></script>
   <style>
+    @font-face {
+      font-family: "teste";
+      src: url(font/zelda.ttf);
+      font-style: normal;
+      font-weight: 100;
+    }
+
+    #titulo {
+      font-family: "teste";
+      font-size: 70px;
+      text-align: center;
+      padding: 1rem;
+      color: #e0dfdc;
+      letter-spacing: .1em;
+      text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e,
+        0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a,
+        0 4px 0 #282828, 0 5px 0 #262626,
+        0 6px 0 #242424, 0 7px 0 #222,
+        0 8px 0 #202020, 0 9px 0 #1e1e1e,
+        0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a,
+        0 12px 0 #181818, 0 13px 0 #161616,
+        0 14px 0 #141414, 0 15px 0 #121212,
+        0 22px 30px rgba(0, 0, 0, 0.9);
+    }
+
     body {
       background-image: url(img/fmred2.jpeg);
       background-position: center center;
@@ -26,8 +51,6 @@
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: 100%;
-      color: black;
-
     }
 
     h3 {
@@ -43,20 +66,25 @@
       ;
     }
 
-    .card-body {
-      text-align: center;
-
-    }
-
     p {
       text-align: center;
-
     }
 
     .card {
-      -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 21px -8px 19px 6px rgba(0, 0, 0, 0.32), 21px -8px 19px 6px rgba(0, 0, 0, 0.32);
-      box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 21px -8px 19px 6px rgba(0, 0, 0, 0.32), 21px -8px 19px 6px rgba(0, 0, 0, 0.32);
+      border-radius: 20px;
+      background: white;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+      text-align: center;
 
+
+      transition: 0.5s ease;
+      cursor: pointer;
+      margin: 30px;
+    }
+
+    .card:hover {
+      transform: scale(1.15);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
     }
 
     ul {
@@ -69,11 +97,13 @@
 </head>
 
 <body>
-  <main>
+  <header>
     <nav>
       <?php include("painel.php"); ?>
     </nav>
-    <h1 style="color:white;">Lista de Personagens</h1>
+    <h1 id="titulo">Lista de Personagens</h1>
+  </header>>
+    <main>
     <div class="container">
       <div class="row">
         <?php
@@ -94,24 +124,28 @@
           ?>
           <div class='col-4' style='padding-left: 0px; padding-top: 5%;'>
             <div class="card" style="width: 18rem;">
-              <?php echo "<img style='height: 180px; 'class='card-img-top'  src=uploads/$img></img>" ?>
+              <?php echo "<img style='height: 180px; padding: 2%; border-top-left-radius: 15px; border-top-right-radius: 15px;''class='card-img-top'  src=uploads/$img></img>" ?>
               <div class="card-body">
                 <h5 class="card-title">#ID <?php echo $id_personagens ?></h5>
                 <p class="card-text"><?php echo $nome ?></p>
               </div>
               <ul>
                 <li>
-                  <h6>Categoria</h6><?php echo $categoria ?>
+                  <h6>Categoria: <?php echo $categoria ?></h6>
                 </li>
+                <hr>
                 <li>
-                  <h6>Arma</h6><?php echo $armas ?>
+                  <h6>Arma: <?php echo $armas ?></h6>
                 </li>
+                <hr>
                 <li>
-                  <h6>Item</h6><?php echo $itens ?>
+                  <h6>Item: <?php echo $itens ?></h6>
                 </li>
+                <hr>
                 <li>
-                  <h6>Tesouro</h6><?php echo $tesouros ?>
+                  <h6>Tesouro: <?php echo $tesouros ?></h6>
                 </li>
+                <hr>
                 <div class="row">
                   <li class='col-4'>
                     <h6>Power</h6><?php echo $power ?>
@@ -135,7 +169,7 @@
         } ?>
       </div>
   </main>
-  <footer>
+  <footer class="fixarfooter">
     <?php include 'footer.php'; ?>
   </footer>
 </body>

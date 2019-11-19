@@ -34,59 +34,58 @@
 </style>
 
 <body>
+  <header>
+    <nav>
+      <?php include("painel.php"); ?>
+    </nav>
+    <h1 id="titulo">Lista de Categorias</h1>
+  </header>
   <main>
-    <header>
-      <nav>
-        <?php include("painel.php"); ?>
-      </nav>
-      <div class="container">
-
-        <h1 id="titulo">Lista de Categorias</h1>
-        <table class="table table-dark table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#id_categoria</th>
-              <th scope="col">Nome Categoria</th>
-              <th scope="col">Ação</th>
-            </tr>
-          </thead>
+    <div class="container">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#id_categoria</th>
+            <th scope="col">Nome Categoria</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
 
 
-          <?php
+        <?php
 
-          include 'conexao.php';
-          $sql = "SELECT * FROM `categoria`";
-          $busca = mysqli_query($conexao, $sql);
+        include 'conexao.php';
+        $sql = "SELECT * FROM `categoria`";
+        $busca = mysqli_query($conexao, $sql);
 
-          while ($array = mysqli_fetch_array($busca)) {
-            $id_categoria = $array['id_categoria'];
-            $nomecategoria = $array['nome_categoria'];
+        while ($array = mysqli_fetch_array($busca)) {
+          $id_categoria = $array['id_categoria'];
+          $nomecategoria = $array['nome_categoria'];
 
 
-            ?>
-            <tr>
-              <td><?php echo $id_categoria ?></td>
-              <td><?php echo $nomecategoria ?></td>
+          ?>
+          <tr>
+            <td><?php echo $id_categoria ?></td>
+            <td><?php echo $nomecategoria ?></td>
 
-              <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
+            <td><a class="btn btn-primary btn-sm" style="color:#ffffff" href="editar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="fas fa-pencil-alt"></i>&nbsp; &nbsp; Editar</a>
               <?php if ($_SESSION['nivel'] == 1) { ?>
-              <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a><?php } ?></td>
-            </tr>
+                <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse item?' href="deletar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp; Apagar</a><?php } ?></td>
+          </tr>
 
-          <?php
+        <?php
           //abrindo novamente a tag php e fechando a {} do wilhe apos o td pois o laco vai adicionar elementos ao TD.
 
         } ?>
 
 
 
-          </tr>
+        </tr>
 
-        </table>
-        <div>
-          <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
-        </div>
-    </header>
+      </table>
+      <div>
+        <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
+      </div>
   </main>
   <footer class="fixarfooter">
     <?php include 'footer.php'; ?>

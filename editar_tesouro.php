@@ -89,44 +89,44 @@ $id = $_GET['id'];
     </style>
 
 <body>
+    <header>
+        <nav>
+            <?php include 'painel.php'; ?>
+        </nav>
+        <h1 id="titulo"> Editar Tesouros</h1>
+    </header>
     <main>
-        <header>
-            <nav>
-                <?php include 'painel.php'; ?>
-            </nav>
-            <h1 id="titulo"> Editar Tesouros</h1>
-            <div class="container">
-                <div class="row col-lg-12">
-                    <form class="form-style" action="atualizar_tesouro.php" method="POST">
-                        <?php
+        <div class="container">
+            <div class="row col-lg-12">
+                <form class="form-style" action="atualizar_tesouro.php" method="POST">
+                    <?php
 
-                        $sql = "SELECT * FROM `tesouro` WHERE id_tesouro = $id";
-                        $buscar = mysqli_query($conexao, $sql);
-                        while ($array = mysqli_fetch_array($buscar)) {
-                            $id_tesouro = $array['id_tesouro'];
-                            $nome_tesouro = $array['nome_tesouro'];
+                    $sql = "SELECT * FROM `tesouro` WHERE id_tesouro = $id";
+                    $buscar = mysqli_query($conexao, $sql);
+                    while ($array = mysqli_fetch_array($buscar)) {
+                        $id_tesouro = $array['id_tesouro'];
+                        $nome_tesouro = $array['nome_tesouro'];
 
 
-                            ?>
+                        ?>
 
 
-                            <div class="form-group">
-                                <label>Id Tesouro</label>
-                                <input type="text" class="form-control" name="id" value="<?php echo $id_tesouro ?>" style="color:green;" readonly>
-                                <label>Nome do Tesouro</label>
-                                <input type="text" class="form-control" name="nome_tesouro" value="<?php echo $nome_tesouro ?>">
+                        <div class="form-group">
+                            <label>Id Tesouro</label>
+                            <input type="text" class="form-control" name="id" value="<?php echo $id_tesouro ?>" style="color:green;" readonly>
+                            <label>Nome do Tesouro</label>
+                            <input type="text" class="form-control" name="nome_tesouro" value="<?php echo $nome_tesouro ?>">
+                        </div>
+                        <div class="form-group">
+
+                            <div id="btnCadastro">
+                                <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
+                                <button type="submit" id="botao" class="btn btn-sm">atualizar</button>
                             </div>
-                            <div class="form-group">
-
-                                <div id="btnCadastro">
-                                    <a href="menu.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
-                                    <button type="submit" id="botao" class="btn btn-sm">atualizar</button>
-                                </div>
-                            <?php  } ?>
-                    </form>
-                </div>
+                        <?php  } ?>
+                </form>
             </div>
-        </header>
+        </div>
     </main>
     <footer class="fixarfooter">
         <?php include 'footer.php'; ?>

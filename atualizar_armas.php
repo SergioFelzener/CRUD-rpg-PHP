@@ -12,6 +12,7 @@ $atualizar = mysqli_query($conexao, $sql);
 
 ?>
 
+
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
