@@ -55,7 +55,7 @@
     <h1 id="titulo"> Cadastro de Armas</h1>
     <main>
         <div class="container">
-            <div class="row col-lg-12">
+            <div class="row col-lg-12 d-flex justify-content-center h-100">
                 <form id="frmArma" class="form-style" action="_inserir_armas.php" method="POST" onSubmit="return submitData();">
                     <label for="armas">Arma</label>
                     <div class="form-group">

@@ -55,7 +55,7 @@
     </header>
     <main>
         <div class="container">
-            <div class="row col-lg-12">
+            <div class="row col-lg-12 d-flex justify-content-center h-100">
                 <form id="frmTesouro" class="form-style" action="_inserir_tesouro.php" method="POST" onSubmit="return submitData();">
                     <label for="tesouro">Tesouro</label>
                     <div class="form-group">
