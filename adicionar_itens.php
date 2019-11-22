@@ -54,7 +54,7 @@
     </header>
     <main>
         <div class="container">
-            <div class="row col-lg-12">
+            <div class="row col-lg-12 d-flex justify-content-center h-100">
                 <form id="frmItens" class="form-style" action="_inserir_itens.php" method="POST" onSubmit="return submitData();">
                     <label for="itens">Item</label>
                     <div class="form-group">

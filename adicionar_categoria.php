@@ -121,7 +121,7 @@
     <main>
         <h1 id="titulo"> Cadastro de Categoria</h1>
         <div class="container">
-            <div class="row col-lg-12">
+            <div class="row col-lg-12 d-flex justify-content-center h-100">
                 <form id="frmCategoria" class="form-style" action="_inserir_categoria.php" method="POST" onSubmit="return submitData();">
                     <label for="categoria">Categoria</label>
                     <div class="form-group">

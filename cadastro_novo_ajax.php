@@ -76,7 +76,7 @@ session_start();
                                 </div>
                                 <div class="form-group">
                                     <a href="index.php" role="button" class="btn btn-sm btn-primary float-left">voltar</a>
-                                    <input id="submit" type="submit" value="Criar Conta" class="inputButton btn btn-sm login_btn float-right" onclick="forcasenha()" />
+                                    <input id="submit" type="submit" value="Criar Conta" class="inputButton btn btn-sm login_btn float-right" />
 
                                 </div>
 

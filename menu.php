@@ -31,6 +31,7 @@
     <nav>
       <?php include("painel.php"); ?>
     </nav>
+    <h1 id="titulo2"> Painel de Controle</h1>
   </header>
   <main>
     <div class="container">
