@@ -48,11 +48,6 @@
 </div>
 <footer class="py-3 bg-dark text-white-50">
   <div>
-    <button id="report" type="button" class="btn btn-danger float-right" style="margin-right: 2%;" onclick="formErro('formErro')">
-      Reportar
-    </button>
-  </div>
-  <div style="margin-left: 130px;">
     <small>Copyright &copy; The Warriors</small>
     <a href="https://www.thewarriors.com">The Warriors Corporation</a>
     <p>Todos os direitos reservados SENAC<a class="text-green ml-2" href="https://www.thewarriors.com" target="_blank">PI 2</a>(CRUD)</p>
@@ -82,16 +77,14 @@
         //alert(ajax.responseText);
         if (ajax.responseText == 'SUCESSO') {
           var desaparece = document.getElementById("descerro");
-          desaparece.style.display ="none";
+          desaparece.style.display = "none";
           var aparece = document.getElementById("ok");
           aparece.style.display = "block";
-          var encerraForm = document.getElementById ("erro");
-          encerraForm.style.display ="none";
-          var encerraButton = document.getElementById ("submeter");
+          var encerraForm = document.getElementById("erro");
+          encerraForm.style.display = "none";
+          var encerraButton = document.getElementById("submeter");
           encerraButton.style.display = "none";
-          
-        } else {
-         
+
         }
 
       }
