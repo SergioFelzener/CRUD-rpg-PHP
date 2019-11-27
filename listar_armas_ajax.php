@@ -51,21 +51,8 @@
             <th scope="col">Ação</th>
           </tr>
         </thead>
-        <?php
-        include 'conexao.php';
-        $sql = "SELECT * FROM `armas`";
-        $busca = mysqli_query($conexao, $sql);
 
-        while ($array = mysqli_fetch_array($busca)) {
-          $id_armas = $array['id_armas'];
-          $nomearma = $array['nome_arma'];
-          ?>
 
-        <?php
-          //abrindo novamente a tag php e fechando a {} do wilhe apos o td pois o laco vai adicionar elementos ao TD.
-        } ?>
-
-        </tr>
       </table>
       <div>
         <a href="menu.php" role="button" class="btn btn-sm btn-primary float-right">voltar</a>
@@ -76,24 +63,42 @@
   </footer>
 </body>
 <script>
-
   var ajax = new XMLHttpRequest();
   ajax.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+      var vetor = JSON.parse(this.responseText);
+
       var table = document.getElementById('tabela');
-      var tr = document.createElement('tr');
 
-      table.appendChild(tr);
+      for (var ncount_linha = 0; ncount_linha < Object.keys(vetor).length; ncount_linha++) {
 
-      var td = document.createElement('td');
-      tr.appendChild(td);
-      td.innerHTML = 'teste';
-      var td = document.createElement('td');
-      tr.appendChild(td);
-      td.innerHTML = 'teste';
+        var tr = document.createElement('tr');
+        table.appendChild(tr);
+
+        Object.keys(vetor[ncount_linha]).forEach(function(value) {
+          var valor_linha = vetor[ncount_linha][value];
+
+          codigo_botao = vetor[ncount_linha]['id_armas'];
+
+          var td = document.createElement('td');
+          td.innerHTML = valor_linha;
+          tr.appendChild(td);
+        });
+
+        // href codigo_botao
+        // tr.appendChild(bt1);
+
+
+
+
+        // tr.appendChild(bt2);
+
+        // Adicionando os botões da grade na linha
+      }
     }
-    ajax.open("GET", "conteudotab.php");
-    ajax.send();
   }
+  ajax.open("GET", "listar_armas ajax.php");
+  ajax.send();
 </script>
+
 </html>
