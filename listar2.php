@@ -82,11 +82,6 @@
       margin: 30px;
     }
 
-    .card:hover {
-      transform: scale(1.15);
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-    }
-
     ul {
       list-style-type: none;
       text-align: center;
@@ -104,7 +99,7 @@
     <h1 id="titulo">Lista de Personagens</h1>
   </header>>
     <main>
-    <div class="container">
+    <div class="container ">
       <div class="row">
         <?php
         include 'conexao.php';
@@ -122,8 +117,8 @@
           $inteli = $array['inteli'];
           $img = $array['img'];
           ?>
-          <div class='col-4' style='padding-left: 0px; padding-top: 5%;'>
-            <div class="card" style="width: 18rem;">
+          <div class='col-lg-4 col-md-6 col-sm-12 col-xs-12' style='padding-left: 0%; padding-top: 5%;'>
+            <div class="card" style="width: 87%;">
               <?php echo "<img style='height: 180px; padding: 2%; border-top-left-radius: 15px; border-top-right-radius: 15px;''class='card-img-top'  src=uploads/$img></img>" ?>
               <div class="card-body">
                 <h5 class="card-title">#ID <?php echo $id_personagens ?></h5>
@@ -166,7 +161,7 @@
           </div>
         <?php
           //abrindo novamente a tag php e fechando a {} do while apos o td pois o laco vai adicionar elementos ao TD.
-        } ?>
+      } ?>
       </div>
   </main>
   <footer class="fixarfooter">
