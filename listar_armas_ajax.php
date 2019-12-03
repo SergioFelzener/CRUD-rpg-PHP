@@ -84,16 +84,22 @@
           td.innerHTML = valor_linha;
           tr.appendChild(td);
         });
-
-        // href codigo_botao
-        // tr.appendChild(bt1);
-
-
-
-
-        // tr.appendChild(bt2);
-
-        // Adicionando os botões da grade na linha
+        var bt1 = document.createElement('a');
+        bt1.type = 'button';
+        bt1.classList.add('btn-lg');
+        bt1.classList.add('btn-primary');
+        bt1.classList.add('fa');
+        bt1.classList.add('fa-pencil');
+       bt1.href= 'editar_armas.php?id=' + codigo_botao;
+        tr.appendChild(bt1);
+        var bt2 = document.createElement('a');
+        bt2.type = 'button';
+        bt2.classList.add('btn-lg');
+        bt2.classList.add('btn-danger');
+        bt2.classList.add('fa');
+        bt2.classList.add('fa-trash-alt');
+        bt2.href= 'deletar_armas.php?id=' + codigo_botao;
+        tr.appendChild(bt2);
       }
     }
   }
