@@ -90,7 +90,7 @@ $id = $_GET['id'];
     </header>
     <main>
         <div class="container">
-            <div class="row col-lg-12">
+            <div class="row col-lg-12 justify-content-center">
                 <form class="form-style" action="atualizar_categoria.php" method="POST">
                     <?php
 
