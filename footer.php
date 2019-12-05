@@ -34,7 +34,7 @@
 
   }
 </style>
-<div class="mb-3 float-right" style="max-width: 200px; margin-bottom: 10px; margin-right: 10px;">
+<div class="mb-3 float-right" style="max-width: 200px; margin-bottom: 10px; margin-right: 10px; position:absolute; right: 5%;">
   <form method="POST" action="erro.php" id="formErro" style="display:none;">
 
     <div class="form-group">
@@ -62,9 +62,18 @@
 <script>
   function formErro() {
     var display = document.getElementById("formErro").style.display;
-    if (display == "none")
+    if (display == "none") {
       document.getElementById("formErro").style.display = 'block';
-    else
+      var desaparece = document.getElementById("descerro");
+      desaparece.style.display = "block";
+      var aparece = document.getElementById("ok");
+      aparece.style.display = "none";
+      var encerraForm = document.getElementById("erro");
+      encerraForm.style.display = "block";
+      encerraForm.value = "";
+      var encerraButton = document.getElementById("submeter");
+      encerraButton.style.display = "block";
+    } else
       document.getElementById("formErro").style.display = 'none';
   }
 </script>

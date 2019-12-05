@@ -41,6 +41,16 @@
         0 22px 30px rgba(0, 0, 0, 0.9);
     }
 
+    #titulo2 {
+      font-family: "teste";
+      font-size: 30px;
+      text-align: center;
+      padding: 1rem;
+      color: blue;
+      letter-spacing: .1em;
+      
+    }
+
     body {
       background-image: url(img/fmred2.jpeg);
       background-position: center center;
@@ -122,7 +132,7 @@
               <?php echo "<img style='height: 180px; padding: 2%; border-top-left-radius: 15px; border-top-right-radius: 15px;''class='card-img-top'  src=uploads/$img></img>" ?>
               <div class="card-body">
                 <h5 class="card-title">#ID <?php echo $id_personagens ?></h5>
-                <p class="card-text"><?php echo $nome ?></p>
+                <p class="card-text" id="titulo2"><?php echo $nome ?></p>
               </div>
               <ul>
                 <li>
@@ -149,13 +159,13 @@
                     <h6>Destreza</h6><?php echo $destreza ?>
                   </li>
                   <li class='col-4'>
-                    <h6>Inteligencia</h6><?php echo $inteli ?>
+                    <h6>Inteligência</h6><?php echo $inteli ?>
                   </li>
                 </div>
               </ul>
               <div class="card-body">
-                <a class="btn btn-primary btn-sm card-link " style="color:#ffffff" href="editar.php?id=<?php echo $id_personagens ?>" role="button"><i class="fas fa-pencil-alt "></i>&nbsp; &nbsp;</a>
-                <a class="btn btn-danger btn-sm card-link " style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse Item?' href="deletar.php?id=<?php echo $id_personagens ?>" role="button"><i class="fas fa-trash-alt"></i>&nbsp; &nbsp;</a>
+                <a class="btn btn-primary btn-sm card-link " style="color:#ffffff" href="editar.php?id=<?php echo $id_personagens ?>" role="button"><i class="fas fa-pencil-alt ">&nbsp; Editar</i></a>
+                <a class="btn btn-danger btn-sm card-link " style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse Item?' href="deletar.php?id=<?php echo $id_personagens ?>" role="button"><i class="fas fa-trash-alt">&nbsp;Apagar</i></a>
               </div>
             </div>
           </div>

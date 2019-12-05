@@ -48,9 +48,9 @@
                                     ?>
                                     <option><?php echo $nome_categoria ?></option>
                                 <?php
-                                    // fechando while depois do option para tal e necessario abrir novamente o php 
-                                }
-                                ?>
+                                // fechando while depois do option para tal e necessario abrir novamente o php 
+                            }
+                            ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -75,10 +75,10 @@
                                     ?>
                                     <option><?php echo $nome_arma ?></option>
                                 <?php
-                                    // fechando while depois do option para tal e necessario abrir novamente o php 
+                                // fechando while depois do option para tal e necessario abrir novamente o php 
 
-                                }
-                                ?>
+                            }
+                            ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -103,10 +103,10 @@
                                     ?>
                                     <option><?php echo $nome_itens ?></option>
                                 <?php
-                                    // fechando while depois do option para tal e necessario abrir novamente o php 
+                                // fechando while depois do option para tal e necessario abrir novamente o php 
 
-                                }
-                                ?>
+                            }
+                            ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -129,9 +129,9 @@
                                     ?>
                                     <option><?php echo $nome_tesouro ?></option>
                                 <?php
-                                    // fechando while depois do option para tal e necessario abrir novamente o php 
-                                }
-                                ?>
+                                // fechando while depois do option para tal e necessario abrir novamente o php 
+                            }
+                            ?>
                             </select>
                         </div>
                         <div class="form-group">

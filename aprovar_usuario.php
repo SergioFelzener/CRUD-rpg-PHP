@@ -75,8 +75,8 @@
                 <a class="btn btn-danger btn-sm" style="color:#ffffff" data-confirm='Tem certeza que deseja apagar esse Item?' href="deletar_usuario.php?id=<?php echo $id_usuario ?>" role="button"><i class="fas fa-hand-middle-finger"></i>&nbsp; Apagar</a></td>
             </tr>
           <?php
-            //abrindo novamente a tag php e fechando a {} do while apos o td pois o laco vai adicionar elementos ao TD.
-          } ?>
+          //abrindo novamente a tag php e fechando a {} do while apos o td pois o laco vai adicionar elementos ao TD.
+        } ?>
           </tr>
         </table>
         <div>

@@ -76,7 +76,7 @@
           <div class="card_image"><img src="img/listar2.png" style="height: 100%; width: 100%; text-align: center;" /></div>
           <div class="card_title">
             <p id="titulo">Listar Personagens</p>
-            <a href="listar.php" class="btn btn-primary">Listar</a>
+            <a href="listar2.php" class="btn btn-primary">Listar</a>
           </div>
         </div>
         <div class="card 6">

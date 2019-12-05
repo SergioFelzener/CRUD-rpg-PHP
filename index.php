@@ -81,7 +81,7 @@ session_start();
                         </div><br>
                         <div class="card-footer">
                             <div class="d-flex justify-content-center links">
-                                Não tem uma conta?<a href="cadastro_novo.php" style="font-size:14px;">Cadastro Novo</a>
+                                Não tem uma conta?<a href="cadastro_novo_ajax.php" style="font-size:14px;">Cadastro Novo</a>
                             </div>
                             <!--
                                 <div class="d-flex justify-content-center">
